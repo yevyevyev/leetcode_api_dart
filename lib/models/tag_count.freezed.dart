@@ -116,7 +116,7 @@ class __$$_TagCountCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_TagCount with DiagnosticableTreeMixin implements _TagCount {
+class _$_TagCount implements _TagCount {
   const _$_TagCount(
       {required this.problemsSolved,
       required this.tagName,
@@ -133,18 +133,8 @@ class _$_TagCount with DiagnosticableTreeMixin implements _TagCount {
   final String tagSlug;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'TagCount(problemsSolved: $problemsSolved, tagName: $tagName, tagSlug: $tagSlug)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'TagCount'))
-      ..add(DiagnosticsProperty('problemsSolved', problemsSolved))
-      ..add(DiagnosticsProperty('tagName', tagName))
-      ..add(DiagnosticsProperty('tagSlug', tagSlug));
   }
 
   @override

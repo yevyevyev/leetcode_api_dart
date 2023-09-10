@@ -101,7 +101,7 @@ class __$$_BadgeCopyWithImpl<$Res> extends _$BadgeCopyWithImpl<$Res, _$_Badge>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Badge with DiagnosticableTreeMixin implements _Badge {
+class _$_Badge implements _Badge {
   const _$_Badge({required this.displayName, required this.icon});
 
   factory _$_Badge.fromJson(Map<String, dynamic> json) =>
@@ -113,17 +113,8 @@ class _$_Badge with DiagnosticableTreeMixin implements _Badge {
   final String icon;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'Badge(displayName: $displayName, icon: $icon)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Badge'))
-      ..add(DiagnosticsProperty('displayName', displayName))
-      ..add(DiagnosticsProperty('icon', icon));
   }
 
   @override

@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:flutter/foundation.dart';
 
 part 'ac_submission.freezed.dart';
 part 'ac_submission.g.dart';

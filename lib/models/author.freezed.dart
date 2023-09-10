@@ -195,7 +195,7 @@ class __$$_AuthorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Author with DiagnosticableTreeMixin implements _Author {
+class _$_Author implements _Author {
   const _$_Author(
       {required this.activeBadge,
       required this.isActive,
@@ -224,22 +224,8 @@ class _$_Author with DiagnosticableTreeMixin implements _Author {
   final String username;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'Author(activeBadge: $activeBadge, isActive: $isActive, isDiscussAdmin: $isDiscussAdmin, isDiscussStaff: $isDiscussStaff, nameColor: $nameColor, profile: $profile, username: $username)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Author'))
-      ..add(DiagnosticsProperty('activeBadge', activeBadge))
-      ..add(DiagnosticsProperty('isActive', isActive))
-      ..add(DiagnosticsProperty('isDiscussAdmin', isDiscussAdmin))
-      ..add(DiagnosticsProperty('isDiscussStaff', isDiscussStaff))
-      ..add(DiagnosticsProperty('nameColor', nameColor))
-      ..add(DiagnosticsProperty('profile', profile))
-      ..add(DiagnosticsProperty('username', username));
   }
 
   @override

@@ -97,9 +97,7 @@ class __$$_SubmitStatsGlobalCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SubmitStatsGlobal
-    with DiagnosticableTreeMixin
-    implements _SubmitStatsGlobal {
+class _$_SubmitStatsGlobal implements _SubmitStatsGlobal {
   const _$_SubmitStatsGlobal(
       {required final List<DifficultyCount> acSubmissionNum})
       : _acSubmissionNum = acSubmissionNum;
@@ -116,16 +114,8 @@ class _$_SubmitStatsGlobal
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubmitStatsGlobal(acSubmissionNum: $acSubmissionNum)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SubmitStatsGlobal'))
-      ..add(DiagnosticsProperty('acSubmissionNum', acSubmissionNum));
   }
 
   @override
@@ -293,9 +283,7 @@ class __$$_UserSolveCountByDifficultyCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_UserSolveCountByDifficulty
-    with DiagnosticableTreeMixin
-    implements _UserSolveCountByDifficulty {
+class _$_UserSolveCountByDifficulty implements _UserSolveCountByDifficulty {
   const _$_UserSolveCountByDifficulty(
       {@JsonKey(name: 'problemsSolvedBeatsStats')
       required final List<DifficultyPercentage> beatsStats,
@@ -318,17 +306,8 @@ class _$_UserSolveCountByDifficulty
   final SubmitStatsGlobal submitStatsGlobal;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'UserSolveCountByDifficulty(beatsStats: $beatsStats, submitStatsGlobal: $submitStatsGlobal)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'UserSolveCountByDifficulty'))
-      ..add(DiagnosticsProperty('beatsStats', beatsStats))
-      ..add(DiagnosticsProperty('submitStatsGlobal', submitStatsGlobal));
   }
 
   @override

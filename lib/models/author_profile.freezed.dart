@@ -107,7 +107,7 @@ class __$$_AuthorProfileCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AuthorProfile with DiagnosticableTreeMixin implements _AuthorProfile {
+class _$_AuthorProfile implements _AuthorProfile {
   const _$_AuthorProfile({required this.reputation, required this.userAvatar});
 
   factory _$_AuthorProfile.fromJson(Map<String, dynamic> json) =>
@@ -119,17 +119,8 @@ class _$_AuthorProfile with DiagnosticableTreeMixin implements _AuthorProfile {
   final String userAvatar;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AuthorProfile(reputation: $reputation, userAvatar: $userAvatar)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AuthorProfile'))
-      ..add(DiagnosticsProperty('reputation', reputation))
-      ..add(DiagnosticsProperty('userAvatar', userAvatar));
   }
 
   @override

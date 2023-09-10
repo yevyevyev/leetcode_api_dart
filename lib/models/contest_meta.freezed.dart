@@ -215,7 +215,7 @@ class __$$_ContestMetaCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ContestMeta with DiagnosticableTreeMixin implements _ContestMeta {
+class _$_ContestMeta implements _ContestMeta {
   const _$_ContestMeta(
       {required this.description,
       required this.discussTopicId,
@@ -253,25 +253,8 @@ class _$_ContestMeta with DiagnosticableTreeMixin implements _ContestMeta {
   final String titleSlug;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ContestMeta(description: $description, discussTopicId: $discussTopicId, duration: $duration, id: $id, isPrivate: $isPrivate, isVirtual: $isVirtual, originStartTime: $originStartTime, startTime: $startTime, title: $title, titleSlug: $titleSlug)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ContestMeta'))
-      ..add(DiagnosticsProperty('description', description))
-      ..add(DiagnosticsProperty('discussTopicId', discussTopicId))
-      ..add(DiagnosticsProperty('duration', duration))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('isPrivate', isPrivate))
-      ..add(DiagnosticsProperty('isVirtual', isVirtual))
-      ..add(DiagnosticsProperty('originStartTime', originStartTime))
-      ..add(DiagnosticsProperty('startTime', startTime))
-      ..add(DiagnosticsProperty('title', title))
-      ..add(DiagnosticsProperty('titleSlug', titleSlug));
   }
 
   @override

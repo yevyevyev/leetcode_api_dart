@@ -319,7 +319,7 @@ class __$$_UserProfileCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_UserProfile with DiagnosticableTreeMixin implements _UserProfile {
+class _$_UserProfile implements _UserProfile {
   const _$_UserProfile(
       {required this.aboutMe,
       required this.categoryDiscussCount,
@@ -394,34 +394,8 @@ class _$_UserProfile with DiagnosticableTreeMixin implements _UserProfile {
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'UserProfile(aboutMe: $aboutMe, categoryDiscussCount: $categoryDiscussCount, categoryDiscussCountDiff: $categoryDiscussCountDiff, company: $company, countryName: $countryName, jobTitle: $jobTitle, postViewCount: $postViewCount, postViewCountDiff: $postViewCountDiff, ranking: $ranking, realName: $realName, reputation: $reputation, reputationDiff: $reputationDiff, school: $school, skillTags: $skillTags, solutionCount: $solutionCount, solutionCountDiff: $solutionCountDiff, userAvatar: $userAvatar, websites: $websites)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'UserProfile'))
-      ..add(DiagnosticsProperty('aboutMe', aboutMe))
-      ..add(DiagnosticsProperty('categoryDiscussCount', categoryDiscussCount))
-      ..add(DiagnosticsProperty(
-          'categoryDiscussCountDiff', categoryDiscussCountDiff))
-      ..add(DiagnosticsProperty('company', company))
-      ..add(DiagnosticsProperty('countryName', countryName))
-      ..add(DiagnosticsProperty('jobTitle', jobTitle))
-      ..add(DiagnosticsProperty('postViewCount', postViewCount))
-      ..add(DiagnosticsProperty('postViewCountDiff', postViewCountDiff))
-      ..add(DiagnosticsProperty('ranking', ranking))
-      ..add(DiagnosticsProperty('realName', realName))
-      ..add(DiagnosticsProperty('reputation', reputation))
-      ..add(DiagnosticsProperty('reputationDiff', reputationDiff))
-      ..add(DiagnosticsProperty('school', school))
-      ..add(DiagnosticsProperty('skillTags', skillTags))
-      ..add(DiagnosticsProperty('solutionCount', solutionCount))
-      ..add(DiagnosticsProperty('solutionCountDiff', solutionCountDiff))
-      ..add(DiagnosticsProperty('userAvatar', userAvatar))
-      ..add(DiagnosticsProperty('websites', websites));
   }
 
   @override

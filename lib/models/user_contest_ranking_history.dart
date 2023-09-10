@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:flutter/foundation.dart';
 
 part 'user_contest_ranking_history.freezed.dart';
 part 'user_contest_ranking_history.g.dart';

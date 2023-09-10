@@ -129,7 +129,7 @@ class __$$_AcSubmissionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AcSubmission with DiagnosticableTreeMixin implements _AcSubmission {
+class _$_AcSubmission implements _AcSubmission {
   const _$_AcSubmission(
       {required this.id,
       required this.timestamp,
@@ -149,19 +149,8 @@ class _$_AcSubmission with DiagnosticableTreeMixin implements _AcSubmission {
   final String titleSlug;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AcSubmission(id: $id, timestamp: $timestamp, title: $title, titleSlug: $titleSlug)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AcSubmission'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('timestamp', timestamp))
-      ..add(DiagnosticsProperty('title', title))
-      ..add(DiagnosticsProperty('titleSlug', titleSlug));
   }
 
   @override

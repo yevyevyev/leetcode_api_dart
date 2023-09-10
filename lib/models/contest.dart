@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:flutter/foundation.dart';
 import 'package:leetcode_api_dart/models/company.dart';
 import 'package:leetcode_api_dart/models/contest_meta.dart';
 import 'package:leetcode_api_dart/models/contest_problem_info.dart';

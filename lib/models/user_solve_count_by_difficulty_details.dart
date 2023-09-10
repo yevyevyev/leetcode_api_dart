@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:flutter/foundation.dart';
 import 'package:leetcode_api_dart/models/difficulty_count.dart';
 import 'package:leetcode_api_dart/models/user_solve_count_by_difficulty.dart';
 

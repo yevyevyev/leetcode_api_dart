@@ -96,9 +96,7 @@ class __$$_ProblemContentCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProblemContent
-    with DiagnosticableTreeMixin
-    implements _ProblemContent {
+class _$_ProblemContent implements _ProblemContent {
   const _$_ProblemContent({required this.content});
 
   factory _$_ProblemContent.fromJson(Map<String, dynamic> json) =>
@@ -108,16 +106,8 @@ class _$_ProblemContent
   final String content;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ProblemContent(content: $content)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ProblemContent'))
-      ..add(DiagnosticsProperty('content', content));
   }
 
   @override

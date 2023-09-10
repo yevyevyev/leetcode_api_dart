@@ -107,9 +107,7 @@ class __$$_DiscussionListCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DiscussionList
-    with DiagnosticableTreeMixin
-    implements _DiscussionList {
+class _$_DiscussionList implements _DiscussionList {
   const _$_DiscussionList(
       {required final List<DiscussionListItem> data, required this.totalNum})
       : _data = data;
@@ -129,17 +127,8 @@ class _$_DiscussionList
   final int totalNum;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'DiscussionList(data: $data, totalNum: $totalNum)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'DiscussionList'))
-      ..add(DiagnosticsProperty('data', data))
-      ..add(DiagnosticsProperty('totalNum', totalNum));
   }
 
   @override

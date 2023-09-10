@@ -108,9 +108,7 @@ class __$$_DifficultyPercentageCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DifficultyPercentage
-    with DiagnosticableTreeMixin
-    implements _DifficultyPercentage {
+class _$_DifficultyPercentage implements _DifficultyPercentage {
   const _$_DifficultyPercentage({this.percentage, required this.difficulty});
 
   factory _$_DifficultyPercentage.fromJson(Map<String, dynamic> json) =>
@@ -122,17 +120,8 @@ class _$_DifficultyPercentage
   final DifficultyEnum difficulty;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'DifficultyPercentage(percentage: $percentage, difficulty: $difficulty)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'DifficultyPercentage'))
-      ..add(DiagnosticsProperty('percentage', percentage))
-      ..add(DiagnosticsProperty('difficulty', difficulty));
   }
 
   @override

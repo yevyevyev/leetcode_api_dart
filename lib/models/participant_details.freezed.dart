@@ -105,7 +105,7 @@ class __$$_UserBadgeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_UserBadge with DiagnosticableTreeMixin implements _UserBadge {
+class _$_UserBadge implements _UserBadge {
   const _$_UserBadge({required this.displayName, required this.icon});
 
   factory _$_UserBadge.fromJson(Map<String, dynamic> json) =>
@@ -117,17 +117,8 @@ class _$_UserBadge with DiagnosticableTreeMixin implements _UserBadge {
   final String icon;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'UserBadge(displayName: $displayName, icon: $icon)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'UserBadge'))
-      ..add(DiagnosticsProperty('displayName', displayName))
-      ..add(DiagnosticsProperty('icon', icon));
   }
 
   @override
@@ -416,9 +407,7 @@ class __$$_ParticipantDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ParticipantDetails
-    with DiagnosticableTreeMixin
-    implements _ParticipantDetails {
+class _$_ParticipantDetails implements _ParticipantDetails {
   const _$_ParticipantDetails(
       {required this.contestId,
       required this.countryCode,
@@ -462,27 +451,8 @@ class _$_ParticipantDetails
   final String usernameColor;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ParticipantDetails(contestId: $contestId, countryCode: $countryCode, countryName: $countryName, dataRegion: $dataRegion, finishTime: $finishTime, globalRanking: $globalRanking, rank: $rank, score: $score, userBadge: $userBadge, userSlug: $userSlug, username: $username, usernameColor: $usernameColor)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ParticipantDetails'))
-      ..add(DiagnosticsProperty('contestId', contestId))
-      ..add(DiagnosticsProperty('countryCode', countryCode))
-      ..add(DiagnosticsProperty('countryName', countryName))
-      ..add(DiagnosticsProperty('dataRegion', dataRegion))
-      ..add(DiagnosticsProperty('finishTime', finishTime))
-      ..add(DiagnosticsProperty('globalRanking', globalRanking))
-      ..add(DiagnosticsProperty('rank', rank))
-      ..add(DiagnosticsProperty('score', score))
-      ..add(DiagnosticsProperty('userBadge', userBadge))
-      ..add(DiagnosticsProperty('userSlug', userSlug))
-      ..add(DiagnosticsProperty('username', username))
-      ..add(DiagnosticsProperty('usernameColor', usernameColor));
   }
 
   @override

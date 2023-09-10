@@ -114,7 +114,7 @@ class __$$_CompanyCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Company with DiagnosticableTreeMixin implements _Company {
+class _$_Company implements _Company {
   const _$_Company(
       {required this.description, required this.logo, required this.name});
 
@@ -129,18 +129,8 @@ class _$_Company with DiagnosticableTreeMixin implements _Company {
   final String name;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'Company(description: $description, logo: $logo, name: $name)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Company'))
-      ..add(DiagnosticsProperty('description', description))
-      ..add(DiagnosticsProperty('logo', logo))
-      ..add(DiagnosticsProperty('name', name));
   }
 
   @override

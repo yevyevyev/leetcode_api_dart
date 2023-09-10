@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:flutter/foundation.dart';
 import 'package:leetcode_api_dart/models/discussion_node.dart';
 
 part 'discussion_list_item.freezed.dart';

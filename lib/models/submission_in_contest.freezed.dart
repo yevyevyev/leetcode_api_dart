@@ -189,9 +189,7 @@ class __$$_SubmissionInContestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SubmissionInContest
-    with DiagnosticableTreeMixin
-    implements _SubmissionInContest {
+class _$_SubmissionInContest implements _SubmissionInContest {
   const _$_SubmissionInContest(
       {required this.contestId,
       required this.dataRegion,
@@ -223,23 +221,8 @@ class _$_SubmissionInContest
   final int submissionId;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubmissionInContest(contestId: $contestId, dataRegion: $dataRegion, date: $date, failCount: $failCount, id: $id, questionId: $questionId, status: $status, submissionId: $submissionId)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SubmissionInContest'))
-      ..add(DiagnosticsProperty('contestId', contestId))
-      ..add(DiagnosticsProperty('dataRegion', dataRegion))
-      ..add(DiagnosticsProperty('date', date))
-      ..add(DiagnosticsProperty('failCount', failCount))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('questionId', questionId))
-      ..add(DiagnosticsProperty('status', status))
-      ..add(DiagnosticsProperty('submissionId', submissionId));
   }
 
   @override

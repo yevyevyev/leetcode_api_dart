@@ -118,9 +118,7 @@ class __$$_ProbemsByTopicsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProbemsByTopics
-    with DiagnosticableTreeMixin
-    implements _ProbemsByTopics {
+class _$_ProbemsByTopics implements _ProbemsByTopics {
   const _$_ProbemsByTopics(
       {required this.name,
       required this.slug,
@@ -143,18 +141,8 @@ class _$_ProbemsByTopics
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ProbemsByTopics(name: $name, slug: $slug, questions: $questions)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ProbemsByTopics'))
-      ..add(DiagnosticsProperty('name', name))
-      ..add(DiagnosticsProperty('slug', slug))
-      ..add(DiagnosticsProperty('questions', questions));
   }
 
   @override

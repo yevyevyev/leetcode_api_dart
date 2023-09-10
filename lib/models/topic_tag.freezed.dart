@@ -116,7 +116,7 @@ class __$$_TopicTagCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_TopicTag with DiagnosticableTreeMixin implements _TopicTag {
+class _$_TopicTag implements _TopicTag {
   const _$_TopicTag({required this.slug, required this.id, required this.name});
 
   factory _$_TopicTag.fromJson(Map<String, dynamic> json) =>
@@ -130,18 +130,8 @@ class _$_TopicTag with DiagnosticableTreeMixin implements _TopicTag {
   final String name;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'TopicTag(slug: $slug, id: $id, name: $name)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'TopicTag'))
-      ..add(DiagnosticsProperty('slug', slug))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('name', name));
   }
 
   @override

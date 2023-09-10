@@ -142,9 +142,7 @@ class __$$_ContestProblemInfoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ContestProblemInfo
-    with DiagnosticableTreeMixin
-    implements _ContestProblemInfo {
+class _$_ContestProblemInfo implements _ContestProblemInfo {
   const _$_ContestProblemInfo(
       {required this.credit,
       required this.id,
@@ -167,20 +165,8 @@ class _$_ContestProblemInfo
   final String titleSlug;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ContestProblemInfo(credit: $credit, id: $id, questionId: $questionId, title: $title, titleSlug: $titleSlug)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ContestProblemInfo'))
-      ..add(DiagnosticsProperty('credit', credit))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('questionId', questionId))
-      ..add(DiagnosticsProperty('title', title))
-      ..add(DiagnosticsProperty('titleSlug', titleSlug));
   }
 
   @override

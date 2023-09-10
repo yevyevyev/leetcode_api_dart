@@ -135,7 +135,6 @@ class __$$_UserSolveCountByDifficultyDetailsCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_UserSolveCountByDifficultyDetails
-    with DiagnosticableTreeMixin
     implements _UserSolveCountByDifficultyDetails {
   const _$_UserSolveCountByDifficultyDetails(
       {required final List<DifficultyCount> allQuestionsCount,
@@ -159,17 +158,8 @@ class _$_UserSolveCountByDifficultyDetails
   final UserSolveCountByDifficulty solveCount;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'UserSolveCountByDifficultyDetails(allQuestionsCount: $allQuestionsCount, solveCount: $solveCount)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'UserSolveCountByDifficultyDetails'))
-      ..add(DiagnosticsProperty('allQuestionsCount', allQuestionsCount))
-      ..add(DiagnosticsProperty('solveCount', solveCount));
   }
 
   @override

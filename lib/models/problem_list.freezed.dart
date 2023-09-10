@@ -108,7 +108,7 @@ class __$$_ProblemListCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProblemList with DiagnosticableTreeMixin implements _ProblemList {
+class _$_ProblemList implements _ProblemList {
   const _$_ProblemList(
       {required this.total,
       @JsonKey(name: 'questions') required final List<Problem> problems})
@@ -129,17 +129,8 @@ class _$_ProblemList with DiagnosticableTreeMixin implements _ProblemList {
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ProblemList(total: $total, problems: $problems)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ProblemList'))
-      ..add(DiagnosticsProperty('total', total))
-      ..add(DiagnosticsProperty('problems', problems));
   }
 
   @override

@@ -138,7 +138,7 @@ class __$$_CommentCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Comment with DiagnosticableTreeMixin implements _Comment {
+class _$_Comment implements _Comment {
   const _$_Comment(
       {required this.id,
       required this.numChildren,
@@ -158,19 +158,8 @@ class _$_Comment with DiagnosticableTreeMixin implements _Comment {
   final Post post;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'Comment(id: $id, numChildren: $numChildren, pinned: $pinned, post: $post)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Comment'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('numChildren', numChildren))
-      ..add(DiagnosticsProperty('pinned', pinned))
-      ..add(DiagnosticsProperty('post', post));
   }
 
   @override

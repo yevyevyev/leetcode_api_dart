@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:flutter/foundation.dart';
 import 'package:leetcode_api_dart/models/author.dart';
 import 'package:leetcode_api_dart/models/coin_reward.dart';
 

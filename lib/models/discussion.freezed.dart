@@ -215,7 +215,7 @@ class __$$_DiscussionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Discussion with DiagnosticableTreeMixin implements _Discussion {
+class _$_Discussion implements _Discussion {
   const _$_Discussion(
       {required this.hideFromTrending,
       required this.id,
@@ -257,24 +257,8 @@ class _$_Discussion with DiagnosticableTreeMixin implements _Discussion {
   final int viewCount;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'Discussion(hideFromTrending: $hideFromTrending, id: $id, pinned: $pinned, post: $post, subscribed: $subscribed, tags: $tags, title: $title, topLevelCommentCount: $topLevelCommentCount, viewCount: $viewCount)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Discussion'))
-      ..add(DiagnosticsProperty('hideFromTrending', hideFromTrending))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('pinned', pinned))
-      ..add(DiagnosticsProperty('post', post))
-      ..add(DiagnosticsProperty('subscribed', subscribed))
-      ..add(DiagnosticsProperty('tags', tags))
-      ..add(DiagnosticsProperty('title', title))
-      ..add(DiagnosticsProperty('topLevelCommentCount', topLevelCommentCount))
-      ..add(DiagnosticsProperty('viewCount', viewCount));
   }
 
   @override

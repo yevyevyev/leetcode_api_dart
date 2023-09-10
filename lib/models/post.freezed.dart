@@ -248,7 +248,7 @@ class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res, _$_Post>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Post with DiagnosticableTreeMixin implements _Post {
+class _$_Post implements _Post {
   const _$_Post(
       {required this.id,
       required this.author,
@@ -298,27 +298,8 @@ class _$_Post with DiagnosticableTreeMixin implements _Post {
   final int voteStatus;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'Post(id: $id, author: $author, authorIsModerator: $authorIsModerator, coinRewards: $coinRewards, content: $content, creationDate: $creationDate, isHidden: $isHidden, isOwnPost: $isOwnPost, status: $status, updationDate: $updationDate, voteCount: $voteCount, voteStatus: $voteStatus)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Post'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('author', author))
-      ..add(DiagnosticsProperty('authorIsModerator', authorIsModerator))
-      ..add(DiagnosticsProperty('coinRewards', coinRewards))
-      ..add(DiagnosticsProperty('content', content))
-      ..add(DiagnosticsProperty('creationDate', creationDate))
-      ..add(DiagnosticsProperty('isHidden', isHidden))
-      ..add(DiagnosticsProperty('isOwnPost', isOwnPost))
-      ..add(DiagnosticsProperty('status', status))
-      ..add(DiagnosticsProperty('updationDate', updationDate))
-      ..add(DiagnosticsProperty('voteCount', voteCount))
-      ..add(DiagnosticsProperty('voteStatus', voteStatus));
   }
 
   @override

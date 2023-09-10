@@ -107,9 +107,7 @@ class __$$_DifficultyCountCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DifficultyCount
-    with DiagnosticableTreeMixin
-    implements _DifficultyCount {
+class _$_DifficultyCount implements _DifficultyCount {
   const _$_DifficultyCount({required this.count, required this.difficulty});
 
   factory _$_DifficultyCount.fromJson(Map<String, dynamic> json) =>
@@ -121,17 +119,8 @@ class _$_DifficultyCount
   final DifficultyEnum difficulty;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'DifficultyCount(count: $count, difficulty: $difficulty)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'DifficultyCount'))
-      ..add(DiagnosticsProperty('count', count))
-      ..add(DiagnosticsProperty('difficulty', difficulty));
   }
 
   @override

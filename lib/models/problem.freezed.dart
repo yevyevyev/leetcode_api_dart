@@ -150,7 +150,7 @@ class __$$_ProblemStatsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProblemStats with DiagnosticableTreeMixin implements _ProblemStats {
+class _$_ProblemStats implements _ProblemStats {
   const _$_ProblemStats(
       {required this.totalAccepted,
       required this.totalSubmission,
@@ -173,20 +173,8 @@ class _$_ProblemStats with DiagnosticableTreeMixin implements _ProblemStats {
   final String acRate;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ProblemStats(totalAccepted: $totalAccepted, totalSubmission: $totalSubmission, totalAcceptedRaw: $totalAcceptedRaw, totalSubmissionRaw: $totalSubmissionRaw, acRate: $acRate)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ProblemStats'))
-      ..add(DiagnosticsProperty('totalAccepted', totalAccepted))
-      ..add(DiagnosticsProperty('totalSubmission', totalSubmission))
-      ..add(DiagnosticsProperty('totalAcceptedRaw', totalAcceptedRaw))
-      ..add(DiagnosticsProperty('totalSubmissionRaw', totalSubmissionRaw))
-      ..add(DiagnosticsProperty('acRate', acRate));
   }
 
   @override
@@ -496,7 +484,7 @@ class __$$_ProblemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Problem with DiagnosticableTreeMixin implements _Problem {
+class _$_Problem implements _Problem {
   const _$_Problem(
       {required this.acRate,
       required this.difficulty,
@@ -552,27 +540,8 @@ class _$_Problem with DiagnosticableTreeMixin implements _Problem {
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'Problem(acRate: $acRate, difficulty: $difficulty, freqBar: $freqBar, frontendQuestionId: $frontendQuestionId, isFavor: $isFavor, paidOnly: $paidOnly, status: $status, questionId: $questionId, title: $title, titleSlug: $titleSlug, stats: $stats, topicTags: $topicTags)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Problem'))
-      ..add(DiagnosticsProperty('acRate', acRate))
-      ..add(DiagnosticsProperty('difficulty', difficulty))
-      ..add(DiagnosticsProperty('freqBar', freqBar))
-      ..add(DiagnosticsProperty('frontendQuestionId', frontendQuestionId))
-      ..add(DiagnosticsProperty('isFavor', isFavor))
-      ..add(DiagnosticsProperty('paidOnly', paidOnly))
-      ..add(DiagnosticsProperty('status', status))
-      ..add(DiagnosticsProperty('questionId', questionId))
-      ..add(DiagnosticsProperty('title', title))
-      ..add(DiagnosticsProperty('titleSlug', titleSlug))
-      ..add(DiagnosticsProperty('stats', stats))
-      ..add(DiagnosticsProperty('topicTags', topicTags));
   }
 
   @override

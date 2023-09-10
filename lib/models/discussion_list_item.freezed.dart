@@ -120,9 +120,7 @@ class __$$_DiscussionListItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DiscussionListItem
-    with DiagnosticableTreeMixin
-    implements _DiscussionListItem {
+class _$_DiscussionListItem implements _DiscussionListItem {
   const _$_DiscussionListItem({required this.cursor, required this.node});
 
   factory _$_DiscussionListItem.fromJson(Map<String, dynamic> json) =>
@@ -134,17 +132,8 @@ class _$_DiscussionListItem
   final DiscussionNode node;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'DiscussionListItem(cursor: $cursor, node: $node)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'DiscussionListItem'))
-      ..add(DiagnosticsProperty('cursor', cursor))
-      ..add(DiagnosticsProperty('node', node));
   }
 
   @override

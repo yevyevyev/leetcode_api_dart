@@ -171,7 +171,7 @@ class __$$_ContestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Contest with DiagnosticableTreeMixin implements _Contest {
+class _$_Contest implements _Contest {
   const _$_Contest(
       {required this.company,
       required this.containsPremium,
@@ -202,20 +202,8 @@ class _$_Contest with DiagnosticableTreeMixin implements _Contest {
   final bool registered;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'Contest(company: $company, containsPremium: $containsPremium, contestMeta: $contestMeta, contestProblemInfo: $contestProblemInfo, registered: $registered)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Contest'))
-      ..add(DiagnosticsProperty('company', company))
-      ..add(DiagnosticsProperty('containsPremium', containsPremium))
-      ..add(DiagnosticsProperty('contestMeta', contestMeta))
-      ..add(DiagnosticsProperty('contestProblemInfo', contestProblemInfo))
-      ..add(DiagnosticsProperty('registered', registered));
   }
 
   @override

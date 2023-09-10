@@ -91,7 +91,7 @@ class __$$__BadgeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$__Badge with DiagnosticableTreeMixin implements __Badge {
+class _$__Badge implements __Badge {
   const _$__Badge({required this.name});
 
   factory _$__Badge.fromJson(Map<String, dynamic> json) =>
@@ -101,16 +101,8 @@ class _$__Badge with DiagnosticableTreeMixin implements __Badge {
   final String name;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return '_Badge(name: $name)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', '_Badge'))
-      ..add(DiagnosticsProperty('name', name));
   }
 
   @override
@@ -314,9 +306,7 @@ class __$$_UserContestRankingCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_UserContestRanking
-    with DiagnosticableTreeMixin
-    implements _UserContestRanking {
+class _$_UserContestRanking implements _UserContestRanking {
   const _$_UserContestRanking(
       {required this.attendedContestsCount,
       required this.badge,
@@ -342,21 +332,8 @@ class _$_UserContestRanking
   final int totalParticipants;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'UserContestRanking(attendedContestsCount: $attendedContestsCount, badge: $badge, globalRanking: $globalRanking, rating: $rating, topPercentage: $topPercentage, totalParticipants: $totalParticipants)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'UserContestRanking'))
-      ..add(DiagnosticsProperty('attendedContestsCount', attendedContestsCount))
-      ..add(DiagnosticsProperty('badge', badge))
-      ..add(DiagnosticsProperty('globalRanking', globalRanking))
-      ..add(DiagnosticsProperty('rating', rating))
-      ..add(DiagnosticsProperty('topPercentage', topPercentage))
-      ..add(DiagnosticsProperty('totalParticipants', totalParticipants));
   }
 
   @override

@@ -136,9 +136,7 @@ class __$$_UserContestRankingDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_UserContestRankingDetails
-    with DiagnosticableTreeMixin
-    implements _UserContestRankingDetails {
+class _$_UserContestRankingDetails implements _UserContestRankingDetails {
   const _$_UserContestRankingDetails(
       {this.userContestRanking,
       required final List<UserContestRankingHistory> userContestRankingHistory})
@@ -159,18 +157,8 @@ class _$_UserContestRankingDetails
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'UserContestRankingDetails(userContestRanking: $userContestRanking, userContestRankingHistory: $userContestRankingHistory)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'UserContestRankingDetails'))
-      ..add(DiagnosticsProperty('userContestRanking', userContestRanking))
-      ..add(DiagnosticsProperty(
-          'userContestRankingHistory', userContestRankingHistory));
   }
 
   @override

@@ -100,7 +100,7 @@ class __$$_TagCopyWithImpl<$Res> extends _$TagCopyWithImpl<$Res, _$_Tag>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Tag with DiagnosticableTreeMixin implements _Tag {
+class _$_Tag implements _Tag {
   const _$_Tag({required this.name, required this.slug});
 
   factory _$_Tag.fromJson(Map<String, dynamic> json) => _$$_TagFromJson(json);
@@ -111,17 +111,8 @@ class _$_Tag with DiagnosticableTreeMixin implements _Tag {
   final String slug;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'Tag(name: $name, slug: $slug)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Tag'))
-      ..add(DiagnosticsProperty('name', name))
-      ..add(DiagnosticsProperty('slug', slug));
   }
 
   @override
@@ -365,9 +356,7 @@ class __$$_DiscussionNodeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DiscussionNode
-    with DiagnosticableTreeMixin
-    implements _DiscussionNode {
+class _$_DiscussionNode implements _DiscussionNode {
   const _$_DiscussionNode(
       {required this.commentCount,
       required this.id,
@@ -406,23 +395,8 @@ class _$_DiscussionNode
   final int viewCount;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'DiscussionNode(commentCount: $commentCount, id: $id, lastComment: $lastComment, pinned: $pinned, post: $post, tags: $tags, title: $title, viewCount: $viewCount)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'DiscussionNode'))
-      ..add(DiagnosticsProperty('commentCount', commentCount))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('lastComment', lastComment))
-      ..add(DiagnosticsProperty('pinned', pinned))
-      ..add(DiagnosticsProperty('post', post))
-      ..add(DiagnosticsProperty('tags', tags))
-      ..add(DiagnosticsProperty('title', title))
-      ..add(DiagnosticsProperty('viewCount', viewCount));
   }
 
   @override

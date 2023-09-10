@@ -129,7 +129,7 @@ class __$$_CoinRewardCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoinReward with DiagnosticableTreeMixin implements _CoinReward {
+class _$_CoinReward implements _CoinReward {
   const _$_CoinReward(
       {required this.date,
       required this.description,
@@ -149,19 +149,8 @@ class _$_CoinReward with DiagnosticableTreeMixin implements _CoinReward {
   final int score;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'CoinReward(date: $date, description: $description, id: $id, score: $score)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'CoinReward'))
-      ..add(DiagnosticsProperty('date', date))
-      ..add(DiagnosticsProperty('description', description))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('score', score));
   }
 
   @override

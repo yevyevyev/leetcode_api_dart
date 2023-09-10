@@ -129,7 +129,7 @@ class __$$_ContestBadgeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ContestBadge with DiagnosticableTreeMixin implements _ContestBadge {
+class _$_ContestBadge implements _ContestBadge {
   const _$_ContestBadge(
       {required this.expired,
       required this.hoverText,
@@ -149,19 +149,8 @@ class _$_ContestBadge with DiagnosticableTreeMixin implements _ContestBadge {
   final String name;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ContestBadge(expired: $expired, hoverText: $hoverText, icon: $icon, name: $name)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ContestBadge'))
-      ..add(DiagnosticsProperty('expired', expired))
-      ..add(DiagnosticsProperty('hoverText', hoverText))
-      ..add(DiagnosticsProperty('icon', icon))
-      ..add(DiagnosticsProperty('name', name));
   }
 
   @override
@@ -395,9 +384,7 @@ class __$$_UserPublicProfileCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_UserPublicProfile
-    with DiagnosticableTreeMixin
-    implements _UserPublicProfile {
+class _$_UserPublicProfile implements _UserPublicProfile {
   const _$_UserPublicProfile(
       {this.contestBadge,
       this.githubUrl,
@@ -423,21 +410,8 @@ class _$_UserPublicProfile
   final String username;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'UserPublicProfile(contestBadge: $contestBadge, githubUrl: $githubUrl, linkedinUrl: $linkedinUrl, profile: $profile, twitterUrl: $twitterUrl, username: $username)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'UserPublicProfile'))
-      ..add(DiagnosticsProperty('contestBadge', contestBadge))
-      ..add(DiagnosticsProperty('githubUrl', githubUrl))
-      ..add(DiagnosticsProperty('linkedinUrl', linkedinUrl))
-      ..add(DiagnosticsProperty('profile', profile))
-      ..add(DiagnosticsProperty('twitterUrl', twitterUrl))
-      ..add(DiagnosticsProperty('username', username));
   }
 
   @override

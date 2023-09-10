@@ -105,7 +105,7 @@ class __$$__ContestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$__Contest with DiagnosticableTreeMixin implements __Contest {
+class _$__Contest implements __Contest {
   const _$__Contest({required this.title, required this.startTime});
 
   factory _$__Contest.fromJson(Map<String, dynamic> json) =>
@@ -117,17 +117,8 @@ class _$__Contest with DiagnosticableTreeMixin implements __Contest {
   final int startTime;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return '_Contest(title: $title, startTime: $startTime)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', '_Contest'))
-      ..add(DiagnosticsProperty('title', title))
-      ..add(DiagnosticsProperty('startTime', startTime));
   }
 
   @override
@@ -368,9 +359,7 @@ class __$$_UserContestRankingHistoryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_UserContestRankingHistory
-    with DiagnosticableTreeMixin
-    implements _UserContestRankingHistory {
+class _$_UserContestRankingHistory implements _UserContestRankingHistory {
   const _$_UserContestRankingHistory(
       {required this.attended,
       required this.contest,
@@ -402,23 +391,8 @@ class _$_UserContestRankingHistory
   final String trendDirection;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'UserContestRankingHistory(attended: $attended, contest: $contest, finishTimeInSeconds: $finishTimeInSeconds, problemsSolved: $problemsSolved, ranking: $ranking, rating: $rating, totalProblems: $totalProblems, trendDirection: $trendDirection)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'UserContestRankingHistory'))
-      ..add(DiagnosticsProperty('attended', attended))
-      ..add(DiagnosticsProperty('contest', contest))
-      ..add(DiagnosticsProperty('finishTimeInSeconds', finishTimeInSeconds))
-      ..add(DiagnosticsProperty('problemsSolved', problemsSolved))
-      ..add(DiagnosticsProperty('ranking', ranking))
-      ..add(DiagnosticsProperty('rating', rating))
-      ..add(DiagnosticsProperty('totalProblems', totalProblems))
-      ..add(DiagnosticsProperty('trendDirection', trendDirection));
   }
 
   @override

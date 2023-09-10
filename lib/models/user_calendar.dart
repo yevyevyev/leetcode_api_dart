@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:flutter/foundation.dart';
 
 part 'user_calendar.freezed.dart';
 part 'user_calendar.g.dart';

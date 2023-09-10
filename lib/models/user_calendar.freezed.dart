@@ -102,7 +102,7 @@ class __$$__BadgeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$__Badge with DiagnosticableTreeMixin implements __Badge {
+class _$__Badge implements __Badge {
   const _$__Badge({required this.icon, required this.name});
 
   factory _$__Badge.fromJson(Map<String, dynamic> json) =>
@@ -114,17 +114,8 @@ class _$__Badge with DiagnosticableTreeMixin implements __Badge {
   final String name;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return '_Badge(icon: $icon, name: $name)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', '_Badge'))
-      ..add(DiagnosticsProperty('icon', icon))
-      ..add(DiagnosticsProperty('name', name));
   }
 
   @override
@@ -274,7 +265,7 @@ class __$$_DccBadgesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DccBadges with DiagnosticableTreeMixin implements _DccBadges {
+class _$_DccBadges implements _DccBadges {
   const _$_DccBadges({required this.badge, required this.timestamp});
 
   factory _$_DccBadges.fromJson(Map<String, dynamic> json) =>
@@ -286,17 +277,8 @@ class _$_DccBadges with DiagnosticableTreeMixin implements _DccBadges {
   final int timestamp;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'DccBadges(badge: $badge, timestamp: $timestamp)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'DccBadges'))
-      ..add(DiagnosticsProperty('badge', badge))
-      ..add(DiagnosticsProperty('timestamp', timestamp));
   }
 
   @override
@@ -435,9 +417,7 @@ class __$$_SubmissionCalendarEntryCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SubmissionCalendarEntry
-    with DiagnosticableTreeMixin
-    implements _SubmissionCalendarEntry {
+class _$_SubmissionCalendarEntry implements _SubmissionCalendarEntry {
   const _$_SubmissionCalendarEntry({required this.date, required this.count});
 
   @override
@@ -446,17 +426,8 @@ class _$_SubmissionCalendarEntry
   final int count;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubmissionCalendarEntry(date: $date, count: $count)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SubmissionCalendarEntry'))
-      ..add(DiagnosticsProperty('date', date))
-      ..add(DiagnosticsProperty('count', count));
   }
 
   @override
@@ -641,7 +612,7 @@ class __$$_UserCalendarCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_UserCalendar with DiagnosticableTreeMixin implements _UserCalendar {
+class _$_UserCalendar implements _UserCalendar {
   const _$_UserCalendar(
       {required final List<int> activeYears,
       required final List<DccBadges> dccBadges,
@@ -692,20 +663,8 @@ class _$_UserCalendar with DiagnosticableTreeMixin implements _UserCalendar {
   final int totalActiveDays;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'UserCalendar(activeYears: $activeYears, dccBadges: $dccBadges, streak: $streak, submissionCalendar: $submissionCalendar, totalActiveDays: $totalActiveDays)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'UserCalendar'))
-      ..add(DiagnosticsProperty('activeYears', activeYears))
-      ..add(DiagnosticsProperty('dccBadges', dccBadges))
-      ..add(DiagnosticsProperty('streak', streak))
-      ..add(DiagnosticsProperty('submissionCalendar', submissionCalendar))
-      ..add(DiagnosticsProperty('totalActiveDays', totalActiveDays));
   }
 
   @override
