@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:leetcode_api_dart/leetcode_api_dart.dart';
+import 'package:leetcode_api_dart/users.dart';
 
 import 'utils.dart';
 

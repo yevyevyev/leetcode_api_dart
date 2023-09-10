@@ -10,8 +10,8 @@ class LeetcodeApiClient {
   final String session;
   final String csrfToken;
 
-  Future<Map<String, dynamic>> makeGraphQLRequest(String body) async {
-    final request = http.Request('GET', Uri.parse(leetcodeApiUrl));
+  Future<Map<String, dynamic>> makeGraphQLRequest(String body, [String? url]) async {
+    final request = http.Request('GET', Uri.parse(url ?? leetcodeApiUrl));
     request.body = body;
     request.headers['Content-Type'] = 'application/json; charset=UTF-8';
     request.headers['Cookie'] = 'LEETCODE_SESSION=$session; csrftoken=$csrfToken';
