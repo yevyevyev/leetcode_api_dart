@@ -31,19 +31,21 @@ _$_UserCalendar _$$_UserCalendarFromJson(Map<String, dynamic> json) =>
     _$_UserCalendar(
       activeYears:
           (json['activeYears'] as List<dynamic>).map((e) => e as int).toList(),
-      dccBagdes: (json['dccBagdes'] as List<dynamic>)
+      dccBadges: (json['dccBadges'] as List<dynamic>)
           .map((e) => DccBadges.fromJson(e as Map<String, dynamic>))
           .toList(),
       streak: json['streak'] as int,
-      submissionCalendar: json['submissionCalendar'] as String,
+      submissionCalendar:
+          submissionCalendarFromJson(json['submissionCalendar']),
       totalActiveDays: json['totalActiveDays'] as int,
     );
 
 Map<String, dynamic> _$$_UserCalendarToJson(_$_UserCalendar instance) =>
     <String, dynamic>{
       'activeYears': instance.activeYears,
-      'dccBagdes': instance.dccBagdes,
+      'dccBadges': instance.dccBadges,
       'streak': instance.streak,
-      'submissionCalendar': instance.submissionCalendar,
+      'submissionCalendar':
+          submissionCalendarToJson(instance.submissionCalendar),
       'totalActiveDays': instance.totalActiveDays,
     };

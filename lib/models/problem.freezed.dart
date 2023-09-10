@@ -21,7 +21,7 @@ Problem _$ProblemFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Problem {
   double get acRate => throw _privateConstructorUsedError;
-  String get difficulty => throw _privateConstructorUsedError;
+  DifficultyEnum get difficulty => throw _privateConstructorUsedError;
   double get freqBar => throw _privateConstructorUsedError;
   String get frontendQuestionId => throw _privateConstructorUsedError;
   bool get isFavor => throw _privateConstructorUsedError;
@@ -45,7 +45,7 @@ abstract class $ProblemCopyWith<$Res> {
   @useResult
   $Res call(
       {double acRate,
-      String difficulty,
+      DifficultyEnum difficulty,
       double freqBar,
       String frontendQuestionId,
       bool isFavor,
@@ -92,7 +92,7 @@ class _$ProblemCopyWithImpl<$Res, $Val extends Problem>
       difficulty: null == difficulty
           ? _value.difficulty
           : difficulty // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DifficultyEnum,
       freqBar: null == freqBar
           ? _value.freqBar
           : freqBar // ignore: cast_nullable_to_non_nullable
@@ -146,7 +146,7 @@ abstract class _$$_ProblemCopyWith<$Res> implements $ProblemCopyWith<$Res> {
   @useResult
   $Res call(
       {double acRate,
-      String difficulty,
+      DifficultyEnum difficulty,
       double freqBar,
       String frontendQuestionId,
       bool isFavor,
@@ -190,7 +190,7 @@ class __$$_ProblemCopyWithImpl<$Res>
       difficulty: null == difficulty
           ? _value.difficulty
           : difficulty // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DifficultyEnum,
       freqBar: null == freqBar
           ? _value.freqBar
           : freqBar // ignore: cast_nullable_to_non_nullable
@@ -259,7 +259,7 @@ class _$_Problem with DiagnosticableTreeMixin implements _Problem {
   @override
   final double acRate;
   @override
-  final String difficulty;
+  final DifficultyEnum difficulty;
   @override
   final double freqBar;
   @override
@@ -369,7 +369,7 @@ class _$_Problem with DiagnosticableTreeMixin implements _Problem {
 abstract class _Problem implements Problem {
   const factory _Problem(
       {required final double acRate,
-      required final String difficulty,
+      required final DifficultyEnum difficulty,
       required final double freqBar,
       required final String frontendQuestionId,
       required final bool isFavor,
@@ -386,7 +386,7 @@ abstract class _Problem implements Problem {
   @override
   double get acRate;
   @override
-  String get difficulty;
+  DifficultyEnum get difficulty;
   @override
   double get freqBar;
   @override

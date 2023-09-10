@@ -21,7 +21,7 @@ DifficultyCount _$DifficultyCountFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$DifficultyCount {
   int get count => throw _privateConstructorUsedError;
-  String get difficulty => throw _privateConstructorUsedError;
+  DifficultyEnum get difficulty => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +35,7 @@ abstract class $DifficultyCountCopyWith<$Res> {
           DifficultyCount value, $Res Function(DifficultyCount) then) =
       _$DifficultyCountCopyWithImpl<$Res, DifficultyCount>;
   @useResult
-  $Res call({int count, String difficulty});
+  $Res call({int count, DifficultyEnum difficulty});
 }
 
 /// @nodoc
@@ -62,7 +62,7 @@ class _$DifficultyCountCopyWithImpl<$Res, $Val extends DifficultyCount>
       difficulty: null == difficulty
           ? _value.difficulty
           : difficulty // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DifficultyEnum,
     ) as $Val);
   }
 }
@@ -75,7 +75,7 @@ abstract class _$$_DifficultyCountCopyWith<$Res>
       __$$_DifficultyCountCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int count, String difficulty});
+  $Res call({int count, DifficultyEnum difficulty});
 }
 
 /// @nodoc
@@ -100,7 +100,7 @@ class __$$_DifficultyCountCopyWithImpl<$Res>
       difficulty: null == difficulty
           ? _value.difficulty
           : difficulty // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DifficultyEnum,
     ));
   }
 }
@@ -118,7 +118,7 @@ class _$_DifficultyCount
   @override
   final int count;
   @override
-  final String difficulty;
+  final DifficultyEnum difficulty;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -165,7 +165,7 @@ class _$_DifficultyCount
 abstract class _DifficultyCount implements DifficultyCount {
   const factory _DifficultyCount(
       {required final int count,
-      required final String difficulty}) = _$_DifficultyCount;
+      required final DifficultyEnum difficulty}) = _$_DifficultyCount;
 
   factory _DifficultyCount.fromJson(Map<String, dynamic> json) =
       _$_DifficultyCount.fromJson;
@@ -173,7 +173,7 @@ abstract class _DifficultyCount implements DifficultyCount {
   @override
   int get count;
   @override
-  String get difficulty;
+  DifficultyEnum get difficulty;
   @override
   @JsonKey(ignore: true)
   _$$_DifficultyCountCopyWith<_$_DifficultyCount> get copyWith =>

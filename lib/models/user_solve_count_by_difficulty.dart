@@ -17,7 +17,7 @@ class SubmitStatsGlobal with _$SubmitStatsGlobal {
 @freezed
 class UserSolveCountByDifficulty with _$UserSolveCountByDifficulty {
   const factory UserSolveCountByDifficulty({
-    required List<DifficultyPercentage> beatsStats,
+    @JsonKey(name: 'problemsSolvedBeatsStats') required List<DifficultyPercentage> beatsStats,
     required SubmitStatsGlobal submitStatsGlobal,
   }) = _UserSolveCountByDifficulty;
 

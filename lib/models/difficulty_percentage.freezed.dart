@@ -20,8 +20,8 @@ DifficultyPercentage _$DifficultyPercentageFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DifficultyPercentage {
-  double get percentage => throw _privateConstructorUsedError;
-  String get difficulty => throw _privateConstructorUsedError;
+  double? get percentage => throw _privateConstructorUsedError;
+  DifficultyEnum get difficulty => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +35,7 @@ abstract class $DifficultyPercentageCopyWith<$Res> {
           $Res Function(DifficultyPercentage) then) =
       _$DifficultyPercentageCopyWithImpl<$Res, DifficultyPercentage>;
   @useResult
-  $Res call({double percentage, String difficulty});
+  $Res call({double? percentage, DifficultyEnum difficulty});
 }
 
 /// @nodoc
@@ -52,18 +52,18 @@ class _$DifficultyPercentageCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? percentage = null,
+    Object? percentage = freezed,
     Object? difficulty = null,
   }) {
     return _then(_value.copyWith(
-      percentage: null == percentage
+      percentage: freezed == percentage
           ? _value.percentage
           : percentage // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       difficulty: null == difficulty
           ? _value.difficulty
           : difficulty // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DifficultyEnum,
     ) as $Val);
   }
 }
@@ -76,7 +76,7 @@ abstract class _$$_DifficultyPercentageCopyWith<$Res>
       __$$_DifficultyPercentageCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({double percentage, String difficulty});
+  $Res call({double? percentage, DifficultyEnum difficulty});
 }
 
 /// @nodoc
@@ -90,18 +90,18 @@ class __$$_DifficultyPercentageCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? percentage = null,
+    Object? percentage = freezed,
     Object? difficulty = null,
   }) {
     return _then(_$_DifficultyPercentage(
-      percentage: null == percentage
+      percentage: freezed == percentage
           ? _value.percentage
           : percentage // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       difficulty: null == difficulty
           ? _value.difficulty
           : difficulty // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DifficultyEnum,
     ));
   }
 }
@@ -111,16 +111,15 @@ class __$$_DifficultyPercentageCopyWithImpl<$Res>
 class _$_DifficultyPercentage
     with DiagnosticableTreeMixin
     implements _DifficultyPercentage {
-  const _$_DifficultyPercentage(
-      {required this.percentage, required this.difficulty});
+  const _$_DifficultyPercentage({this.percentage, required this.difficulty});
 
   factory _$_DifficultyPercentage.fromJson(Map<String, dynamic> json) =>
       _$$_DifficultyPercentageFromJson(json);
 
   @override
-  final double percentage;
+  final double? percentage;
   @override
-  final String difficulty;
+  final DifficultyEnum difficulty;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -168,16 +167,16 @@ class _$_DifficultyPercentage
 
 abstract class _DifficultyPercentage implements DifficultyPercentage {
   const factory _DifficultyPercentage(
-      {required final double percentage,
-      required final String difficulty}) = _$_DifficultyPercentage;
+      {final double? percentage,
+      required final DifficultyEnum difficulty}) = _$_DifficultyPercentage;
 
   factory _DifficultyPercentage.fromJson(Map<String, dynamic> json) =
       _$_DifficultyPercentage.fromJson;
 
   @override
-  double get percentage;
+  double? get percentage;
   @override
-  String get difficulty;
+  DifficultyEnum get difficulty;
   @override
   @JsonKey(ignore: true)
   _$$_DifficultyPercentageCopyWith<_$_DifficultyPercentage> get copyWith =>

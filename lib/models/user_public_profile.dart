@@ -20,11 +20,11 @@ class ContestBadge with _$ContestBadge {
 @freezed
 class UserPublicProfile with _$UserPublicProfile {
   const factory UserPublicProfile({
-    required ContestBadge contestBadge,
-    required String githubUrl,
-    required String linkedinUrl,
+    ContestBadge? contestBadge,
+    String? githubUrl,
+    String? linkedinUrl,
     required UserProfile profile,
-    required String twitterUrl,
+    String? twitterUrl,
     required String username,
   }) = _UserPublicProfile;
 

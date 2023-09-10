@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
+import 'package:leetcode_api_dart/models/difficulty_enum.dart';
 import 'package:leetcode_api_dart/models/topic_tag.dart';
 
 part 'problem.freezed.dart';
@@ -9,7 +10,7 @@ part 'problem.g.dart';
 class Problem with _$Problem {
   const factory Problem({
     required double acRate,
-    required String difficulty,
+    required DifficultyEnum difficulty,
     required double freqBar,
     required String frontendQuestionId,
     required bool isFavor,

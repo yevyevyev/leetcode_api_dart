@@ -9,7 +9,7 @@ part 'user_contest_ranking_details.g.dart';
 @freezed
 class UserContestRankingDetails with _$UserContestRankingDetails {
   const factory UserContestRankingDetails({
-    required UserContestRanking userContestRanking,
+    UserContestRanking? userContestRanking,
     required List<UserContestRankingHistory> userContestRankingHistory,
   }) = _UserContestRankingDetails;
 

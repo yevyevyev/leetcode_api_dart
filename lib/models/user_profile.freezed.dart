@@ -23,16 +23,16 @@ mixin _$UserProfile {
   String get aboutMe => throw _privateConstructorUsedError;
   int get categoryDiscussCount => throw _privateConstructorUsedError;
   int get categoryDiscussCountDiff => throw _privateConstructorUsedError;
-  String get company => throw _privateConstructorUsedError;
-  String get countryName => throw _privateConstructorUsedError;
-  String get jobTitle => throw _privateConstructorUsedError;
+  String? get company => throw _privateConstructorUsedError;
+  String? get countryName => throw _privateConstructorUsedError;
+  String? get jobTitle => throw _privateConstructorUsedError;
   int get postViewCount => throw _privateConstructorUsedError;
   int get postViewCountDiff => throw _privateConstructorUsedError;
   int get ranking => throw _privateConstructorUsedError;
   String get realName => throw _privateConstructorUsedError;
   int get reputation => throw _privateConstructorUsedError;
   int get reputationDiff => throw _privateConstructorUsedError;
-  String get school => throw _privateConstructorUsedError;
+  String? get school => throw _privateConstructorUsedError;
   List<String> get skillTags => throw _privateConstructorUsedError;
   int get solutionCount => throw _privateConstructorUsedError;
   int get solutionCountDiff => throw _privateConstructorUsedError;
@@ -55,16 +55,16 @@ abstract class $UserProfileCopyWith<$Res> {
       {String aboutMe,
       int categoryDiscussCount,
       int categoryDiscussCountDiff,
-      String company,
-      String countryName,
-      String jobTitle,
+      String? company,
+      String? countryName,
+      String? jobTitle,
       int postViewCount,
       int postViewCountDiff,
       int ranking,
       String realName,
       int reputation,
       int reputationDiff,
-      String school,
+      String? school,
       List<String> skillTags,
       int solutionCount,
       int solutionCountDiff,
@@ -88,16 +88,16 @@ class _$UserProfileCopyWithImpl<$Res, $Val extends UserProfile>
     Object? aboutMe = null,
     Object? categoryDiscussCount = null,
     Object? categoryDiscussCountDiff = null,
-    Object? company = null,
-    Object? countryName = null,
-    Object? jobTitle = null,
+    Object? company = freezed,
+    Object? countryName = freezed,
+    Object? jobTitle = freezed,
     Object? postViewCount = null,
     Object? postViewCountDiff = null,
     Object? ranking = null,
     Object? realName = null,
     Object? reputation = null,
     Object? reputationDiff = null,
-    Object? school = null,
+    Object? school = freezed,
     Object? skillTags = null,
     Object? solutionCount = null,
     Object? solutionCountDiff = null,
@@ -117,18 +117,18 @@ class _$UserProfileCopyWithImpl<$Res, $Val extends UserProfile>
           ? _value.categoryDiscussCountDiff
           : categoryDiscussCountDiff // ignore: cast_nullable_to_non_nullable
               as int,
-      company: null == company
+      company: freezed == company
           ? _value.company
           : company // ignore: cast_nullable_to_non_nullable
-              as String,
-      countryName: null == countryName
+              as String?,
+      countryName: freezed == countryName
           ? _value.countryName
           : countryName // ignore: cast_nullable_to_non_nullable
-              as String,
-      jobTitle: null == jobTitle
+              as String?,
+      jobTitle: freezed == jobTitle
           ? _value.jobTitle
           : jobTitle // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       postViewCount: null == postViewCount
           ? _value.postViewCount
           : postViewCount // ignore: cast_nullable_to_non_nullable
@@ -153,10 +153,10 @@ class _$UserProfileCopyWithImpl<$Res, $Val extends UserProfile>
           ? _value.reputationDiff
           : reputationDiff // ignore: cast_nullable_to_non_nullable
               as int,
-      school: null == school
+      school: freezed == school
           ? _value.school
           : school // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       skillTags: null == skillTags
           ? _value.skillTags
           : skillTags // ignore: cast_nullable_to_non_nullable
@@ -193,16 +193,16 @@ abstract class _$$_UserProfileCopyWith<$Res>
       {String aboutMe,
       int categoryDiscussCount,
       int categoryDiscussCountDiff,
-      String company,
-      String countryName,
-      String jobTitle,
+      String? company,
+      String? countryName,
+      String? jobTitle,
       int postViewCount,
       int postViewCountDiff,
       int ranking,
       String realName,
       int reputation,
       int reputationDiff,
-      String school,
+      String? school,
       List<String> skillTags,
       int solutionCount,
       int solutionCountDiff,
@@ -224,16 +224,16 @@ class __$$_UserProfileCopyWithImpl<$Res>
     Object? aboutMe = null,
     Object? categoryDiscussCount = null,
     Object? categoryDiscussCountDiff = null,
-    Object? company = null,
-    Object? countryName = null,
-    Object? jobTitle = null,
+    Object? company = freezed,
+    Object? countryName = freezed,
+    Object? jobTitle = freezed,
     Object? postViewCount = null,
     Object? postViewCountDiff = null,
     Object? ranking = null,
     Object? realName = null,
     Object? reputation = null,
     Object? reputationDiff = null,
-    Object? school = null,
+    Object? school = freezed,
     Object? skillTags = null,
     Object? solutionCount = null,
     Object? solutionCountDiff = null,
@@ -253,18 +253,18 @@ class __$$_UserProfileCopyWithImpl<$Res>
           ? _value.categoryDiscussCountDiff
           : categoryDiscussCountDiff // ignore: cast_nullable_to_non_nullable
               as int,
-      company: null == company
+      company: freezed == company
           ? _value.company
           : company // ignore: cast_nullable_to_non_nullable
-              as String,
-      countryName: null == countryName
+              as String?,
+      countryName: freezed == countryName
           ? _value.countryName
           : countryName // ignore: cast_nullable_to_non_nullable
-              as String,
-      jobTitle: null == jobTitle
+              as String?,
+      jobTitle: freezed == jobTitle
           ? _value.jobTitle
           : jobTitle // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       postViewCount: null == postViewCount
           ? _value.postViewCount
           : postViewCount // ignore: cast_nullable_to_non_nullable
@@ -289,10 +289,10 @@ class __$$_UserProfileCopyWithImpl<$Res>
           ? _value.reputationDiff
           : reputationDiff // ignore: cast_nullable_to_non_nullable
               as int,
-      school: null == school
+      school: freezed == school
           ? _value.school
           : school // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       skillTags: null == skillTags
           ? _value._skillTags
           : skillTags // ignore: cast_nullable_to_non_nullable
@@ -324,16 +324,16 @@ class _$_UserProfile with DiagnosticableTreeMixin implements _UserProfile {
       {required this.aboutMe,
       required this.categoryDiscussCount,
       required this.categoryDiscussCountDiff,
-      required this.company,
-      required this.countryName,
-      required this.jobTitle,
+      this.company,
+      this.countryName,
+      this.jobTitle,
       required this.postViewCount,
       required this.postViewCountDiff,
       required this.ranking,
       required this.realName,
       required this.reputation,
       required this.reputationDiff,
-      required this.school,
+      this.school,
       required final List<String> skillTags,
       required this.solutionCount,
       required this.solutionCountDiff,
@@ -352,11 +352,11 @@ class _$_UserProfile with DiagnosticableTreeMixin implements _UserProfile {
   @override
   final int categoryDiscussCountDiff;
   @override
-  final String company;
+  final String? company;
   @override
-  final String countryName;
+  final String? countryName;
   @override
-  final String jobTitle;
+  final String? jobTitle;
   @override
   final int postViewCount;
   @override
@@ -370,7 +370,7 @@ class _$_UserProfile with DiagnosticableTreeMixin implements _UserProfile {
   @override
   final int reputationDiff;
   @override
-  final String school;
+  final String? school;
   final List<String> _skillTags;
   @override
   List<String> get skillTags {
@@ -505,16 +505,16 @@ abstract class _UserProfile implements UserProfile {
       {required final String aboutMe,
       required final int categoryDiscussCount,
       required final int categoryDiscussCountDiff,
-      required final String company,
-      required final String countryName,
-      required final String jobTitle,
+      final String? company,
+      final String? countryName,
+      final String? jobTitle,
       required final int postViewCount,
       required final int postViewCountDiff,
       required final int ranking,
       required final String realName,
       required final int reputation,
       required final int reputationDiff,
-      required final String school,
+      final String? school,
       required final List<String> skillTags,
       required final int solutionCount,
       required final int solutionCountDiff,
@@ -531,11 +531,11 @@ abstract class _UserProfile implements UserProfile {
   @override
   int get categoryDiscussCountDiff;
   @override
-  String get company;
+  String? get company;
   @override
-  String get countryName;
+  String? get countryName;
   @override
-  String get jobTitle;
+  String? get jobTitle;
   @override
   int get postViewCount;
   @override
@@ -549,7 +549,7 @@ abstract class _UserProfile implements UserProfile {
   @override
   int get reputationDiff;
   @override
-  String get school;
+  String? get school;
   @override
   List<String> get skillTags;
   @override

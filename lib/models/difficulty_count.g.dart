@@ -9,11 +9,18 @@ part of 'difficulty_count.dart';
 _$_DifficultyCount _$$_DifficultyCountFromJson(Map<String, dynamic> json) =>
     _$_DifficultyCount(
       count: json['count'] as int,
-      difficulty: json['difficulty'] as String,
+      difficulty: $enumDecode(_$DifficultyEnumEnumMap, json['difficulty']),
     );
 
 Map<String, dynamic> _$$_DifficultyCountToJson(_$_DifficultyCount instance) =>
     <String, dynamic>{
       'count': instance.count,
-      'difficulty': instance.difficulty,
+      'difficulty': _$DifficultyEnumEnumMap[instance.difficulty]!,
     };
+
+const _$DifficultyEnumEnumMap = {
+  DifficultyEnum.Easy: 'Easy',
+  DifficultyEnum.Medium: 'Medium',
+  DifficultyEnum.Hard: 'Hard',
+  DifficultyEnum.All: 'All',
+};

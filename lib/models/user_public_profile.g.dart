@@ -24,12 +24,13 @@ Map<String, dynamic> _$$_ContestBadgeToJson(_$_ContestBadge instance) =>
 
 _$_UserPublicProfile _$$_UserPublicProfileFromJson(Map<String, dynamic> json) =>
     _$_UserPublicProfile(
-      contestBadge:
-          ContestBadge.fromJson(json['contestBadge'] as Map<String, dynamic>),
-      githubUrl: json['githubUrl'] as String,
-      linkedinUrl: json['linkedinUrl'] as String,
+      contestBadge: json['contestBadge'] == null
+          ? null
+          : ContestBadge.fromJson(json['contestBadge'] as Map<String, dynamic>),
+      githubUrl: json['githubUrl'] as String?,
+      linkedinUrl: json['linkedinUrl'] as String?,
       profile: UserProfile.fromJson(json['profile'] as Map<String, dynamic>),
-      twitterUrl: json['twitterUrl'] as String,
+      twitterUrl: json['twitterUrl'] as String?,
       username: json['username'] as String,
     );
 

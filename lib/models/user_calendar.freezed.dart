@@ -345,6 +345,156 @@ abstract class _DccBadges implements DccBadges {
       throw _privateConstructorUsedError;
 }
 
+/// @nodoc
+mixin _$SubmissionCalendarEntry {
+  DateTime get date => throw _privateConstructorUsedError;
+  int get count => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $SubmissionCalendarEntryCopyWith<SubmissionCalendarEntry> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SubmissionCalendarEntryCopyWith<$Res> {
+  factory $SubmissionCalendarEntryCopyWith(SubmissionCalendarEntry value,
+          $Res Function(SubmissionCalendarEntry) then) =
+      _$SubmissionCalendarEntryCopyWithImpl<$Res, SubmissionCalendarEntry>;
+  @useResult
+  $Res call({DateTime date, int count});
+}
+
+/// @nodoc
+class _$SubmissionCalendarEntryCopyWithImpl<$Res,
+        $Val extends SubmissionCalendarEntry>
+    implements $SubmissionCalendarEntryCopyWith<$Res> {
+  _$SubmissionCalendarEntryCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? date = null,
+    Object? count = null,
+  }) {
+    return _then(_value.copyWith(
+      date: null == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      count: null == count
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_SubmissionCalendarEntryCopyWith<$Res>
+    implements $SubmissionCalendarEntryCopyWith<$Res> {
+  factory _$$_SubmissionCalendarEntryCopyWith(_$_SubmissionCalendarEntry value,
+          $Res Function(_$_SubmissionCalendarEntry) then) =
+      __$$_SubmissionCalendarEntryCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({DateTime date, int count});
+}
+
+/// @nodoc
+class __$$_SubmissionCalendarEntryCopyWithImpl<$Res>
+    extends _$SubmissionCalendarEntryCopyWithImpl<$Res,
+        _$_SubmissionCalendarEntry>
+    implements _$$_SubmissionCalendarEntryCopyWith<$Res> {
+  __$$_SubmissionCalendarEntryCopyWithImpl(_$_SubmissionCalendarEntry _value,
+      $Res Function(_$_SubmissionCalendarEntry) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? date = null,
+    Object? count = null,
+  }) {
+    return _then(_$_SubmissionCalendarEntry(
+      date: null == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      count: null == count
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_SubmissionCalendarEntry
+    with DiagnosticableTreeMixin
+    implements _SubmissionCalendarEntry {
+  const _$_SubmissionCalendarEntry({required this.date, required this.count});
+
+  @override
+  final DateTime date;
+  @override
+  final int count;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'SubmissionCalendarEntry(date: $date, count: $count)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'SubmissionCalendarEntry'))
+      ..add(DiagnosticsProperty('date', date))
+      ..add(DiagnosticsProperty('count', count));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_SubmissionCalendarEntry &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.count, count) || other.count == count));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, date, count);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SubmissionCalendarEntryCopyWith<_$_SubmissionCalendarEntry>
+      get copyWith =>
+          __$$_SubmissionCalendarEntryCopyWithImpl<_$_SubmissionCalendarEntry>(
+              this, _$identity);
+}
+
+abstract class _SubmissionCalendarEntry implements SubmissionCalendarEntry {
+  const factory _SubmissionCalendarEntry(
+      {required final DateTime date,
+      required final int count}) = _$_SubmissionCalendarEntry;
+
+  @override
+  DateTime get date;
+  @override
+  int get count;
+  @override
+  @JsonKey(ignore: true)
+  _$$_SubmissionCalendarEntryCopyWith<_$_SubmissionCalendarEntry>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
 UserCalendar _$UserCalendarFromJson(Map<String, dynamic> json) {
   return _UserCalendar.fromJson(json);
 }
@@ -352,9 +502,12 @@ UserCalendar _$UserCalendarFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$UserCalendar {
   List<int> get activeYears => throw _privateConstructorUsedError;
-  List<DccBadges> get dccBagdes => throw _privateConstructorUsedError;
+  List<DccBadges> get dccBadges => throw _privateConstructorUsedError;
   int get streak => throw _privateConstructorUsedError;
-  String get submissionCalendar => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: submissionCalendarFromJson, toJson: submissionCalendarToJson)
+  List<SubmissionCalendarEntry> get submissionCalendar =>
+      throw _privateConstructorUsedError;
   int get totalActiveDays => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -371,9 +524,12 @@ abstract class $UserCalendarCopyWith<$Res> {
   @useResult
   $Res call(
       {List<int> activeYears,
-      List<DccBadges> dccBagdes,
+      List<DccBadges> dccBadges,
       int streak,
-      String submissionCalendar,
+      @JsonKey(
+          fromJson: submissionCalendarFromJson,
+          toJson: submissionCalendarToJson)
+      List<SubmissionCalendarEntry> submissionCalendar,
       int totalActiveDays});
 }
 
@@ -391,7 +547,7 @@ class _$UserCalendarCopyWithImpl<$Res, $Val extends UserCalendar>
   @override
   $Res call({
     Object? activeYears = null,
-    Object? dccBagdes = null,
+    Object? dccBadges = null,
     Object? streak = null,
     Object? submissionCalendar = null,
     Object? totalActiveDays = null,
@@ -401,9 +557,9 @@ class _$UserCalendarCopyWithImpl<$Res, $Val extends UserCalendar>
           ? _value.activeYears
           : activeYears // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      dccBagdes: null == dccBagdes
-          ? _value.dccBagdes
-          : dccBagdes // ignore: cast_nullable_to_non_nullable
+      dccBadges: null == dccBadges
+          ? _value.dccBadges
+          : dccBadges // ignore: cast_nullable_to_non_nullable
               as List<DccBadges>,
       streak: null == streak
           ? _value.streak
@@ -412,7 +568,7 @@ class _$UserCalendarCopyWithImpl<$Res, $Val extends UserCalendar>
       submissionCalendar: null == submissionCalendar
           ? _value.submissionCalendar
           : submissionCalendar // ignore: cast_nullable_to_non_nullable
-              as String,
+              as List<SubmissionCalendarEntry>,
       totalActiveDays: null == totalActiveDays
           ? _value.totalActiveDays
           : totalActiveDays // ignore: cast_nullable_to_non_nullable
@@ -431,9 +587,12 @@ abstract class _$$_UserCalendarCopyWith<$Res>
   @useResult
   $Res call(
       {List<int> activeYears,
-      List<DccBadges> dccBagdes,
+      List<DccBadges> dccBadges,
       int streak,
-      String submissionCalendar,
+      @JsonKey(
+          fromJson: submissionCalendarFromJson,
+          toJson: submissionCalendarToJson)
+      List<SubmissionCalendarEntry> submissionCalendar,
       int totalActiveDays});
 }
 
@@ -449,7 +608,7 @@ class __$$_UserCalendarCopyWithImpl<$Res>
   @override
   $Res call({
     Object? activeYears = null,
-    Object? dccBagdes = null,
+    Object? dccBadges = null,
     Object? streak = null,
     Object? submissionCalendar = null,
     Object? totalActiveDays = null,
@@ -459,18 +618,18 @@ class __$$_UserCalendarCopyWithImpl<$Res>
           ? _value._activeYears
           : activeYears // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      dccBagdes: null == dccBagdes
-          ? _value._dccBagdes
-          : dccBagdes // ignore: cast_nullable_to_non_nullable
+      dccBadges: null == dccBadges
+          ? _value._dccBadges
+          : dccBadges // ignore: cast_nullable_to_non_nullable
               as List<DccBadges>,
       streak: null == streak
           ? _value.streak
           : streak // ignore: cast_nullable_to_non_nullable
               as int,
       submissionCalendar: null == submissionCalendar
-          ? _value.submissionCalendar
+          ? _value._submissionCalendar
           : submissionCalendar // ignore: cast_nullable_to_non_nullable
-              as String,
+              as List<SubmissionCalendarEntry>,
       totalActiveDays: null == totalActiveDays
           ? _value.totalActiveDays
           : totalActiveDays // ignore: cast_nullable_to_non_nullable
@@ -484,12 +643,16 @@ class __$$_UserCalendarCopyWithImpl<$Res>
 class _$_UserCalendar with DiagnosticableTreeMixin implements _UserCalendar {
   const _$_UserCalendar(
       {required final List<int> activeYears,
-      required final List<DccBadges> dccBagdes,
+      required final List<DccBadges> dccBadges,
       required this.streak,
-      required this.submissionCalendar,
+      @JsonKey(
+          fromJson: submissionCalendarFromJson,
+          toJson: submissionCalendarToJson)
+      required final List<SubmissionCalendarEntry> submissionCalendar,
       required this.totalActiveDays})
       : _activeYears = activeYears,
-        _dccBagdes = dccBagdes;
+        _dccBadges = dccBadges,
+        _submissionCalendar = submissionCalendar;
 
   factory _$_UserCalendar.fromJson(Map<String, dynamic> json) =>
       _$$_UserCalendarFromJson(json);
@@ -502,24 +665,33 @@ class _$_UserCalendar with DiagnosticableTreeMixin implements _UserCalendar {
     return EqualUnmodifiableListView(_activeYears);
   }
 
-  final List<DccBadges> _dccBagdes;
+  final List<DccBadges> _dccBadges;
   @override
-  List<DccBadges> get dccBagdes {
-    if (_dccBagdes is EqualUnmodifiableListView) return _dccBagdes;
+  List<DccBadges> get dccBadges {
+    if (_dccBadges is EqualUnmodifiableListView) return _dccBadges;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_dccBagdes);
+    return EqualUnmodifiableListView(_dccBadges);
   }
 
   @override
   final int streak;
+  final List<SubmissionCalendarEntry> _submissionCalendar;
   @override
-  final String submissionCalendar;
+  @JsonKey(
+      fromJson: submissionCalendarFromJson, toJson: submissionCalendarToJson)
+  List<SubmissionCalendarEntry> get submissionCalendar {
+    if (_submissionCalendar is EqualUnmodifiableListView)
+      return _submissionCalendar;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_submissionCalendar);
+  }
+
   @override
   final int totalActiveDays;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'UserCalendar(activeYears: $activeYears, dccBagdes: $dccBagdes, streak: $streak, submissionCalendar: $submissionCalendar, totalActiveDays: $totalActiveDays)';
+    return 'UserCalendar(activeYears: $activeYears, dccBadges: $dccBadges, streak: $streak, submissionCalendar: $submissionCalendar, totalActiveDays: $totalActiveDays)';
   }
 
   @override
@@ -528,7 +700,7 @@ class _$_UserCalendar with DiagnosticableTreeMixin implements _UserCalendar {
     properties
       ..add(DiagnosticsProperty('type', 'UserCalendar'))
       ..add(DiagnosticsProperty('activeYears', activeYears))
-      ..add(DiagnosticsProperty('dccBagdes', dccBagdes))
+      ..add(DiagnosticsProperty('dccBadges', dccBadges))
       ..add(DiagnosticsProperty('streak', streak))
       ..add(DiagnosticsProperty('submissionCalendar', submissionCalendar))
       ..add(DiagnosticsProperty('totalActiveDays', totalActiveDays));
@@ -542,10 +714,10 @@ class _$_UserCalendar with DiagnosticableTreeMixin implements _UserCalendar {
             const DeepCollectionEquality()
                 .equals(other._activeYears, _activeYears) &&
             const DeepCollectionEquality()
-                .equals(other._dccBagdes, _dccBagdes) &&
+                .equals(other._dccBadges, _dccBadges) &&
             (identical(other.streak, streak) || other.streak == streak) &&
-            (identical(other.submissionCalendar, submissionCalendar) ||
-                other.submissionCalendar == submissionCalendar) &&
+            const DeepCollectionEquality()
+                .equals(other._submissionCalendar, _submissionCalendar) &&
             (identical(other.totalActiveDays, totalActiveDays) ||
                 other.totalActiveDays == totalActiveDays));
   }
@@ -555,9 +727,9 @@ class _$_UserCalendar with DiagnosticableTreeMixin implements _UserCalendar {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_activeYears),
-      const DeepCollectionEquality().hash(_dccBagdes),
+      const DeepCollectionEquality().hash(_dccBadges),
       streak,
-      submissionCalendar,
+      const DeepCollectionEquality().hash(_submissionCalendar),
       totalActiveDays);
 
   @JsonKey(ignore: true)
@@ -577,9 +749,12 @@ class _$_UserCalendar with DiagnosticableTreeMixin implements _UserCalendar {
 abstract class _UserCalendar implements UserCalendar {
   const factory _UserCalendar(
       {required final List<int> activeYears,
-      required final List<DccBadges> dccBagdes,
+      required final List<DccBadges> dccBadges,
       required final int streak,
-      required final String submissionCalendar,
+      @JsonKey(
+          fromJson: submissionCalendarFromJson,
+          toJson: submissionCalendarToJson)
+      required final List<SubmissionCalendarEntry> submissionCalendar,
       required final int totalActiveDays}) = _$_UserCalendar;
 
   factory _UserCalendar.fromJson(Map<String, dynamic> json) =
@@ -588,11 +763,13 @@ abstract class _UserCalendar implements UserCalendar {
   @override
   List<int> get activeYears;
   @override
-  List<DccBadges> get dccBagdes;
+  List<DccBadges> get dccBadges;
   @override
   int get streak;
   @override
-  String get submissionCalendar;
+  @JsonKey(
+      fromJson: submissionCalendarFromJson, toJson: submissionCalendarToJson)
+  List<SubmissionCalendarEntry> get submissionCalendar;
   @override
   int get totalActiveDays;
   @override

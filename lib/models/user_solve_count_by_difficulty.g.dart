@@ -22,7 +22,7 @@ Map<String, dynamic> _$$_SubmitStatsGlobalToJson(
 _$_UserSolveCountByDifficulty _$$_UserSolveCountByDifficultyFromJson(
         Map<String, dynamic> json) =>
     _$_UserSolveCountByDifficulty(
-      beatsStats: (json['beatsStats'] as List<dynamic>)
+      beatsStats: (json['problemsSolvedBeatsStats'] as List<dynamic>)
           .map((e) => DifficultyPercentage.fromJson(e as Map<String, dynamic>))
           .toList(),
       submitStatsGlobal: SubmitStatsGlobal.fromJson(
@@ -32,6 +32,6 @@ _$_UserSolveCountByDifficulty _$$_UserSolveCountByDifficultyFromJson(
 Map<String, dynamic> _$$_UserSolveCountByDifficultyToJson(
         _$_UserSolveCountByDifficulty instance) =>
     <String, dynamic>{
-      'beatsStats': instance.beatsStats,
+      'problemsSolvedBeatsStats': instance.beatsStats,
       'submitStatsGlobal': instance.submitStatsGlobal,
     };

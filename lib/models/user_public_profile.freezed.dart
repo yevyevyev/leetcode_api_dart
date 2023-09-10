@@ -224,11 +224,11 @@ UserPublicProfile _$UserPublicProfileFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$UserPublicProfile {
-  ContestBadge get contestBadge => throw _privateConstructorUsedError;
-  String get githubUrl => throw _privateConstructorUsedError;
-  String get linkedinUrl => throw _privateConstructorUsedError;
+  ContestBadge? get contestBadge => throw _privateConstructorUsedError;
+  String? get githubUrl => throw _privateConstructorUsedError;
+  String? get linkedinUrl => throw _privateConstructorUsedError;
   UserProfile get profile => throw _privateConstructorUsedError;
-  String get twitterUrl => throw _privateConstructorUsedError;
+  String? get twitterUrl => throw _privateConstructorUsedError;
   String get username => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -244,14 +244,14 @@ abstract class $UserPublicProfileCopyWith<$Res> {
       _$UserPublicProfileCopyWithImpl<$Res, UserPublicProfile>;
   @useResult
   $Res call(
-      {ContestBadge contestBadge,
-      String githubUrl,
-      String linkedinUrl,
+      {ContestBadge? contestBadge,
+      String? githubUrl,
+      String? linkedinUrl,
       UserProfile profile,
-      String twitterUrl,
+      String? twitterUrl,
       String username});
 
-  $ContestBadgeCopyWith<$Res> get contestBadge;
+  $ContestBadgeCopyWith<$Res>? get contestBadge;
   $UserProfileCopyWith<$Res> get profile;
 }
 
@@ -268,34 +268,34 @@ class _$UserPublicProfileCopyWithImpl<$Res, $Val extends UserPublicProfile>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? contestBadge = null,
-    Object? githubUrl = null,
-    Object? linkedinUrl = null,
+    Object? contestBadge = freezed,
+    Object? githubUrl = freezed,
+    Object? linkedinUrl = freezed,
     Object? profile = null,
-    Object? twitterUrl = null,
+    Object? twitterUrl = freezed,
     Object? username = null,
   }) {
     return _then(_value.copyWith(
-      contestBadge: null == contestBadge
+      contestBadge: freezed == contestBadge
           ? _value.contestBadge
           : contestBadge // ignore: cast_nullable_to_non_nullable
-              as ContestBadge,
-      githubUrl: null == githubUrl
+              as ContestBadge?,
+      githubUrl: freezed == githubUrl
           ? _value.githubUrl
           : githubUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      linkedinUrl: null == linkedinUrl
+              as String?,
+      linkedinUrl: freezed == linkedinUrl
           ? _value.linkedinUrl
           : linkedinUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       profile: null == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as UserProfile,
-      twitterUrl: null == twitterUrl
+      twitterUrl: freezed == twitterUrl
           ? _value.twitterUrl
           : twitterUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       username: null == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
@@ -305,8 +305,12 @@ class _$UserPublicProfileCopyWithImpl<$Res, $Val extends UserPublicProfile>
 
   @override
   @pragma('vm:prefer-inline')
-  $ContestBadgeCopyWith<$Res> get contestBadge {
-    return $ContestBadgeCopyWith<$Res>(_value.contestBadge, (value) {
+  $ContestBadgeCopyWith<$Res>? get contestBadge {
+    if (_value.contestBadge == null) {
+      return null;
+    }
+
+    return $ContestBadgeCopyWith<$Res>(_value.contestBadge!, (value) {
       return _then(_value.copyWith(contestBadge: value) as $Val);
     });
   }
@@ -329,15 +333,15 @@ abstract class _$$_UserPublicProfileCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {ContestBadge contestBadge,
-      String githubUrl,
-      String linkedinUrl,
+      {ContestBadge? contestBadge,
+      String? githubUrl,
+      String? linkedinUrl,
       UserProfile profile,
-      String twitterUrl,
+      String? twitterUrl,
       String username});
 
   @override
-  $ContestBadgeCopyWith<$Res> get contestBadge;
+  $ContestBadgeCopyWith<$Res>? get contestBadge;
   @override
   $UserProfileCopyWith<$Res> get profile;
 }
@@ -353,34 +357,34 @@ class __$$_UserPublicProfileCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? contestBadge = null,
-    Object? githubUrl = null,
-    Object? linkedinUrl = null,
+    Object? contestBadge = freezed,
+    Object? githubUrl = freezed,
+    Object? linkedinUrl = freezed,
     Object? profile = null,
-    Object? twitterUrl = null,
+    Object? twitterUrl = freezed,
     Object? username = null,
   }) {
     return _then(_$_UserPublicProfile(
-      contestBadge: null == contestBadge
+      contestBadge: freezed == contestBadge
           ? _value.contestBadge
           : contestBadge // ignore: cast_nullable_to_non_nullable
-              as ContestBadge,
-      githubUrl: null == githubUrl
+              as ContestBadge?,
+      githubUrl: freezed == githubUrl
           ? _value.githubUrl
           : githubUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      linkedinUrl: null == linkedinUrl
+              as String?,
+      linkedinUrl: freezed == linkedinUrl
           ? _value.linkedinUrl
           : linkedinUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       profile: null == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as UserProfile,
-      twitterUrl: null == twitterUrl
+      twitterUrl: freezed == twitterUrl
           ? _value.twitterUrl
           : twitterUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       username: null == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
@@ -395,26 +399,26 @@ class _$_UserPublicProfile
     with DiagnosticableTreeMixin
     implements _UserPublicProfile {
   const _$_UserPublicProfile(
-      {required this.contestBadge,
-      required this.githubUrl,
-      required this.linkedinUrl,
+      {this.contestBadge,
+      this.githubUrl,
+      this.linkedinUrl,
       required this.profile,
-      required this.twitterUrl,
+      this.twitterUrl,
       required this.username});
 
   factory _$_UserPublicProfile.fromJson(Map<String, dynamic> json) =>
       _$$_UserPublicProfileFromJson(json);
 
   @override
-  final ContestBadge contestBadge;
+  final ContestBadge? contestBadge;
   @override
-  final String githubUrl;
+  final String? githubUrl;
   @override
-  final String linkedinUrl;
+  final String? linkedinUrl;
   @override
   final UserProfile profile;
   @override
-  final String twitterUrl;
+  final String? twitterUrl;
   @override
   final String username;
 
@@ -476,26 +480,26 @@ class _$_UserPublicProfile
 
 abstract class _UserPublicProfile implements UserPublicProfile {
   const factory _UserPublicProfile(
-      {required final ContestBadge contestBadge,
-      required final String githubUrl,
-      required final String linkedinUrl,
+      {final ContestBadge? contestBadge,
+      final String? githubUrl,
+      final String? linkedinUrl,
       required final UserProfile profile,
-      required final String twitterUrl,
+      final String? twitterUrl,
       required final String username}) = _$_UserPublicProfile;
 
   factory _UserPublicProfile.fromJson(Map<String, dynamic> json) =
       _$_UserPublicProfile.fromJson;
 
   @override
-  ContestBadge get contestBadge;
+  ContestBadge? get contestBadge;
   @override
-  String get githubUrl;
+  String? get githubUrl;
   @override
-  String get linkedinUrl;
+  String? get linkedinUrl;
   @override
   UserProfile get profile;
   @override
-  String get twitterUrl;
+  String? get twitterUrl;
   @override
   String get username;
   @override

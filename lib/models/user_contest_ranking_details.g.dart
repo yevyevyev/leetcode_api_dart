@@ -9,8 +9,10 @@ part of 'user_contest_ranking_details.dart';
 _$_UserContestRankingDetails _$$_UserContestRankingDetailsFromJson(
         Map<String, dynamic> json) =>
     _$_UserContestRankingDetails(
-      userContestRanking: UserContestRanking.fromJson(
-          json['userContestRanking'] as Map<String, dynamic>),
+      userContestRanking: json['userContestRanking'] == null
+          ? null
+          : UserContestRanking.fromJson(
+              json['userContestRanking'] as Map<String, dynamic>),
       userContestRankingHistory:
           (json['userContestRankingHistory'] as List<dynamic>)
               .map((e) =>

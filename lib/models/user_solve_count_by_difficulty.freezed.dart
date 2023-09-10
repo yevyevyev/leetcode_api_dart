@@ -180,6 +180,7 @@ UserSolveCountByDifficulty _$UserSolveCountByDifficultyFromJson(
 
 /// @nodoc
 mixin _$UserSolveCountByDifficulty {
+  @JsonKey(name: 'problemsSolvedBeatsStats')
   List<DifficultyPercentage> get beatsStats =>
       throw _privateConstructorUsedError;
   SubmitStatsGlobal get submitStatsGlobal => throw _privateConstructorUsedError;
@@ -198,7 +199,8 @@ abstract class $UserSolveCountByDifficultyCopyWith<$Res> {
           UserSolveCountByDifficulty>;
   @useResult
   $Res call(
-      {List<DifficultyPercentage> beatsStats,
+      {@JsonKey(name: 'problemsSolvedBeatsStats')
+      List<DifficultyPercentage> beatsStats,
       SubmitStatsGlobal submitStatsGlobal});
 
   $SubmitStatsGlobalCopyWith<$Res> get submitStatsGlobal;
@@ -252,7 +254,8 @@ abstract class _$$_UserSolveCountByDifficultyCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<DifficultyPercentage> beatsStats,
+      {@JsonKey(name: 'problemsSolvedBeatsStats')
+      List<DifficultyPercentage> beatsStats,
       SubmitStatsGlobal submitStatsGlobal});
 
   @override
@@ -294,7 +297,8 @@ class _$_UserSolveCountByDifficulty
     with DiagnosticableTreeMixin
     implements _UserSolveCountByDifficulty {
   const _$_UserSolveCountByDifficulty(
-      {required final List<DifficultyPercentage> beatsStats,
+      {@JsonKey(name: 'problemsSolvedBeatsStats')
+      required final List<DifficultyPercentage> beatsStats,
       required this.submitStatsGlobal})
       : _beatsStats = beatsStats;
 
@@ -303,6 +307,7 @@ class _$_UserSolveCountByDifficulty
 
   final List<DifficultyPercentage> _beatsStats;
   @override
+  @JsonKey(name: 'problemsSolvedBeatsStats')
   List<DifficultyPercentage> get beatsStats {
     if (_beatsStats is EqualUnmodifiableListView) return _beatsStats;
     // ignore: implicit_dynamic_type
@@ -360,7 +365,8 @@ class _$_UserSolveCountByDifficulty
 abstract class _UserSolveCountByDifficulty
     implements UserSolveCountByDifficulty {
   const factory _UserSolveCountByDifficulty(
-          {required final List<DifficultyPercentage> beatsStats,
+          {@JsonKey(name: 'problemsSolvedBeatsStats')
+          required final List<DifficultyPercentage> beatsStats,
           required final SubmitStatsGlobal submitStatsGlobal}) =
       _$_UserSolveCountByDifficulty;
 
@@ -368,6 +374,7 @@ abstract class _UserSolveCountByDifficulty
       _$_UserSolveCountByDifficulty.fromJson;
 
   @override
+  @JsonKey(name: 'problemsSolvedBeatsStats')
   List<DifficultyPercentage> get beatsStats;
   @override
   SubmitStatsGlobal get submitStatsGlobal;

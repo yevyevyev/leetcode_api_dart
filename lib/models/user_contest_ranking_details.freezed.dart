@@ -21,7 +21,7 @@ UserContestRankingDetails _$UserContestRankingDetailsFromJson(
 
 /// @nodoc
 mixin _$UserContestRankingDetails {
-  UserContestRanking get userContestRanking =>
+  UserContestRanking? get userContestRanking =>
       throw _privateConstructorUsedError;
   List<UserContestRankingHistory> get userContestRankingHistory =>
       throw _privateConstructorUsedError;
@@ -39,10 +39,10 @@ abstract class $UserContestRankingDetailsCopyWith<$Res> {
       _$UserContestRankingDetailsCopyWithImpl<$Res, UserContestRankingDetails>;
   @useResult
   $Res call(
-      {UserContestRanking userContestRanking,
+      {UserContestRanking? userContestRanking,
       List<UserContestRankingHistory> userContestRankingHistory});
 
-  $UserContestRankingCopyWith<$Res> get userContestRanking;
+  $UserContestRankingCopyWith<$Res>? get userContestRanking;
 }
 
 /// @nodoc
@@ -59,14 +59,14 @@ class _$UserContestRankingDetailsCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userContestRanking = null,
+    Object? userContestRanking = freezed,
     Object? userContestRankingHistory = null,
   }) {
     return _then(_value.copyWith(
-      userContestRanking: null == userContestRanking
+      userContestRanking: freezed == userContestRanking
           ? _value.userContestRanking
           : userContestRanking // ignore: cast_nullable_to_non_nullable
-              as UserContestRanking,
+              as UserContestRanking?,
       userContestRankingHistory: null == userContestRankingHistory
           ? _value.userContestRankingHistory
           : userContestRankingHistory // ignore: cast_nullable_to_non_nullable
@@ -76,8 +76,12 @@ class _$UserContestRankingDetailsCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $UserContestRankingCopyWith<$Res> get userContestRanking {
-    return $UserContestRankingCopyWith<$Res>(_value.userContestRanking,
+  $UserContestRankingCopyWith<$Res>? get userContestRanking {
+    if (_value.userContestRanking == null) {
+      return null;
+    }
+
+    return $UserContestRankingCopyWith<$Res>(_value.userContestRanking!,
         (value) {
       return _then(_value.copyWith(userContestRanking: value) as $Val);
     });
@@ -94,11 +98,11 @@ abstract class _$$_UserContestRankingDetailsCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {UserContestRanking userContestRanking,
+      {UserContestRanking? userContestRanking,
       List<UserContestRankingHistory> userContestRankingHistory});
 
   @override
-  $UserContestRankingCopyWith<$Res> get userContestRanking;
+  $UserContestRankingCopyWith<$Res>? get userContestRanking;
 }
 
 /// @nodoc
@@ -114,14 +118,14 @@ class __$$_UserContestRankingDetailsCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userContestRanking = null,
+    Object? userContestRanking = freezed,
     Object? userContestRankingHistory = null,
   }) {
     return _then(_$_UserContestRankingDetails(
-      userContestRanking: null == userContestRanking
+      userContestRanking: freezed == userContestRanking
           ? _value.userContestRanking
           : userContestRanking // ignore: cast_nullable_to_non_nullable
-              as UserContestRanking,
+              as UserContestRanking?,
       userContestRankingHistory: null == userContestRankingHistory
           ? _value._userContestRankingHistory
           : userContestRankingHistory // ignore: cast_nullable_to_non_nullable
@@ -136,7 +140,7 @@ class _$_UserContestRankingDetails
     with DiagnosticableTreeMixin
     implements _UserContestRankingDetails {
   const _$_UserContestRankingDetails(
-      {required this.userContestRanking,
+      {this.userContestRanking,
       required final List<UserContestRankingHistory> userContestRankingHistory})
       : _userContestRankingHistory = userContestRankingHistory;
 
@@ -144,7 +148,7 @@ class _$_UserContestRankingDetails
       _$$_UserContestRankingDetailsFromJson(json);
 
   @override
-  final UserContestRanking userContestRanking;
+  final UserContestRanking? userContestRanking;
   final List<UserContestRankingHistory> _userContestRankingHistory;
   @override
   List<UserContestRankingHistory> get userContestRankingHistory {
@@ -202,7 +206,7 @@ class _$_UserContestRankingDetails
 
 abstract class _UserContestRankingDetails implements UserContestRankingDetails {
   const factory _UserContestRankingDetails(
-      {required final UserContestRanking userContestRanking,
+      {final UserContestRanking? userContestRanking,
       required final List<UserContestRankingHistory>
           userContestRankingHistory}) = _$_UserContestRankingDetails;
 
@@ -210,7 +214,7 @@ abstract class _UserContestRankingDetails implements UserContestRankingDetails {
       _$_UserContestRankingDetails.fromJson;
 
   @override
-  UserContestRanking get userContestRanking;
+  UserContestRanking? get userContestRanking;
   @override
   List<UserContestRankingHistory> get userContestRankingHistory;
   @override
