@@ -505,7 +505,8 @@ mixin _$UserCalendar {
   List<DccBadges> get dccBadges => throw _privateConstructorUsedError;
   int get streak => throw _privateConstructorUsedError;
   @JsonKey(
-      fromJson: submissionCalendarFromJson, toJson: submissionCalendarToJson)
+      fromJson: _SubmissionCalendarEntryConverter.fromJson,
+      toJson: _SubmissionCalendarEntryConverter.toJson)
   List<SubmissionCalendarEntry> get submissionCalendar =>
       throw _privateConstructorUsedError;
   int get totalActiveDays => throw _privateConstructorUsedError;
@@ -527,8 +528,8 @@ abstract class $UserCalendarCopyWith<$Res> {
       List<DccBadges> dccBadges,
       int streak,
       @JsonKey(
-          fromJson: submissionCalendarFromJson,
-          toJson: submissionCalendarToJson)
+          fromJson: _SubmissionCalendarEntryConverter.fromJson,
+          toJson: _SubmissionCalendarEntryConverter.toJson)
       List<SubmissionCalendarEntry> submissionCalendar,
       int totalActiveDays});
 }
@@ -590,8 +591,8 @@ abstract class _$$_UserCalendarCopyWith<$Res>
       List<DccBadges> dccBadges,
       int streak,
       @JsonKey(
-          fromJson: submissionCalendarFromJson,
-          toJson: submissionCalendarToJson)
+          fromJson: _SubmissionCalendarEntryConverter.fromJson,
+          toJson: _SubmissionCalendarEntryConverter.toJson)
       List<SubmissionCalendarEntry> submissionCalendar,
       int totalActiveDays});
 }
@@ -646,8 +647,8 @@ class _$_UserCalendar with DiagnosticableTreeMixin implements _UserCalendar {
       required final List<DccBadges> dccBadges,
       required this.streak,
       @JsonKey(
-          fromJson: submissionCalendarFromJson,
-          toJson: submissionCalendarToJson)
+          fromJson: _SubmissionCalendarEntryConverter.fromJson,
+          toJson: _SubmissionCalendarEntryConverter.toJson)
       required final List<SubmissionCalendarEntry> submissionCalendar,
       required this.totalActiveDays})
       : _activeYears = activeYears,
@@ -678,7 +679,8 @@ class _$_UserCalendar with DiagnosticableTreeMixin implements _UserCalendar {
   final List<SubmissionCalendarEntry> _submissionCalendar;
   @override
   @JsonKey(
-      fromJson: submissionCalendarFromJson, toJson: submissionCalendarToJson)
+      fromJson: _SubmissionCalendarEntryConverter.fromJson,
+      toJson: _SubmissionCalendarEntryConverter.toJson)
   List<SubmissionCalendarEntry> get submissionCalendar {
     if (_submissionCalendar is EqualUnmodifiableListView)
       return _submissionCalendar;
@@ -752,8 +754,8 @@ abstract class _UserCalendar implements UserCalendar {
       required final List<DccBadges> dccBadges,
       required final int streak,
       @JsonKey(
-          fromJson: submissionCalendarFromJson,
-          toJson: submissionCalendarToJson)
+          fromJson: _SubmissionCalendarEntryConverter.fromJson,
+          toJson: _SubmissionCalendarEntryConverter.toJson)
       required final List<SubmissionCalendarEntry> submissionCalendar,
       required final int totalActiveDays}) = _$_UserCalendar;
 
@@ -768,7 +770,8 @@ abstract class _UserCalendar implements UserCalendar {
   int get streak;
   @override
   @JsonKey(
-      fromJson: submissionCalendarFromJson, toJson: submissionCalendarToJson)
+      fromJson: _SubmissionCalendarEntryConverter.fromJson,
+      toJson: _SubmissionCalendarEntryConverter.toJson)
   List<SubmissionCalendarEntry> get submissionCalendar;
   @override
   int get totalActiveDays;

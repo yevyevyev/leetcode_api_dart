@@ -9,7 +9,7 @@ part of 'problem_list.dart';
 _$_ProblemList _$$_ProblemListFromJson(Map<String, dynamic> json) =>
     _$_ProblemList(
       total: json['total'] as int,
-      problems: (json['problems'] as List<dynamic>)
+      problems: (json['questions'] as List<dynamic>)
           .map((e) => Problem.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
@@ -17,5 +17,5 @@ _$_ProblemList _$$_ProblemListFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_ProblemListToJson(_$_ProblemList instance) =>
     <String, dynamic>{
       'total': instance.total,
-      'problems': instance.problems,
+      'questions': instance.problems,
     };

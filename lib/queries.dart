@@ -1,7 +1,7 @@
 import 'package:leetcode_api_dart/utils.dart';
 
 const problemCommonFields =
-    '''\n      acRate\n      difficulty\n      freqBar\n      frontendQuestionId: questionFrontendId\n      questionId\n      isFavor\n      paidOnly: isPaidOnly\n      status\n      title\n      titleSlug\n      stats\n      topicTags {\n        name\n        id\n        slug\n      }\n''';
+    r'''\n      acRate\n      difficulty\n      freqBar\n      frontendQuestionId: questionFrontendId\n      questionId\n      isFavor\n      paidOnly: isPaidOnly\n      status\n      title\n      titleSlug\n      stats\n      topicTags {\n        name\n        id\n        slug\n      }\n''';
 
 String getGraphQLPayloadAllProblems({required int offset, required int pageSize}) => r'''{
 		"query": "\n    query problemsetQuestionList($categorySlug: String, $limit: Int, $skip: Int, $filters: QuestionListFilterInput) {\n  problemsetQuestionList: questionList(\n    categorySlug: $categorySlug\n    limit: $limit\n    skip: $skip\n    filters: $filters\n  ) {\n    total: totalNum\n    questions: data {#problemCommonFields      hasSolution\n      hasVideoSolution\n    }\n  }\n}\n    ",
@@ -31,7 +31,7 @@ String getGraphQLPayloadProblemsByTopic({required String topicTag}) => r'''{
 		},
 		"query": "query getTopicTag($slug: String!) {\n  topicTag(slug: $slug) {\n    name\n    slug\n    questions {#problemCommonFields     companyTags {\n        name\n        slug\n        }\n      }\n    frequencies\n      }\n  favoritesLists {\n    publicFavorites {\n      ...favoriteFields\n          }\n    privateFavorites {\n      ...favoriteFields\n          }\n      }\n}\n\nfragment favoriteFields on FavoriteNode {\n  idHash\n  id\n  name\n  isPublicFavorite\n  viewCount\n  creator\n  isWatched\n  questions {\n    questionId\n    title\n    titleSlug\n      }\n  }\n"
 	}'''
-    .replaceAll('#titleSlug', topicTag)
+    .replaceAll('#topicTag', topicTag)
     .replaceAll('#problemCommonFields', problemCommonFields);
 
 String getGraphQLPayloadTopInterviewProblems({required int offset, required int pageSize}) => r'''{
@@ -47,7 +47,7 @@ String getGraphQLPayloadTopInterviewProblems({required int offset, required int 
 	}'''
     .replaceAll('#problemCommonFields', problemCommonFields)
     .replaceAll('#offset', offset.toString())
-    .replaceAll('#limit', pageSize.toString());
+    .replaceAll('#pageSize', pageSize.toString());
 
 String getGraphQLPayloadDiscussionList({
   required List<String> categories,

@@ -9,7 +9,7 @@ part 'problem_list.g.dart';
 class ProblemList with _$ProblemList {
   const factory ProblemList({
     required int total,
-    required List<Problem> problems,
+    @JsonKey(name: 'questions') required List<Problem> problems,
   }) = _ProblemList;
 
   factory ProblemList.fromJson(Map<String, Object?> json) => _$ProblemListFromJson(json);

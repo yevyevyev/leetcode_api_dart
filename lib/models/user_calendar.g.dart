@@ -35,8 +35,8 @@ _$_UserCalendar _$$_UserCalendarFromJson(Map<String, dynamic> json) =>
           .map((e) => DccBadges.fromJson(e as Map<String, dynamic>))
           .toList(),
       streak: json['streak'] as int,
-      submissionCalendar:
-          submissionCalendarFromJson(json['submissionCalendar']),
+      submissionCalendar: _SubmissionCalendarEntryConverter.fromJson(
+          json['submissionCalendar']),
       totalActiveDays: json['totalActiveDays'] as int,
     );
 
@@ -46,6 +46,6 @@ Map<String, dynamic> _$$_UserCalendarToJson(_$_UserCalendar instance) =>
       'dccBadges': instance.dccBadges,
       'streak': instance.streak,
       'submissionCalendar':
-          submissionCalendarToJson(instance.submissionCalendar),
+          _SubmissionCalendarEntryConverter.toJson(instance.submissionCalendar),
       'totalActiveDays': instance.totalActiveDays,
     };

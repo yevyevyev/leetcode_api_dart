@@ -19,7 +19,7 @@ class LeetcodeApiClient {
     final response = await request.send();
 
     if (response.statusCode >= 400 && response.statusCode < 499) {
-      throw LeetcodeApiError(['Access denied'], response.statusCode);
+      throw LeetcodeApiError([response.reasonPhrase ?? 'Access denied'], response.statusCode);
     }
 
     final bytes = await response.stream.toBytes();

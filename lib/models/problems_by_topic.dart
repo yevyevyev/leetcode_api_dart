@@ -8,8 +8,8 @@ part 'problems_by_topic.g.dart';
 @freezed
 class ProbemsByTopics with _$ProbemsByTopics {
   const factory ProbemsByTopics({
-    required String topicName,
-    required String topicSlug,
+    required String name,
+    required String slug,
     required List<Problem> questions,
   }) = _ProbemsByTopics;
 

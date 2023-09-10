@@ -20,8 +20,8 @@ ProbemsByTopics _$ProbemsByTopicsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ProbemsByTopics {
-  String get topicName => throw _privateConstructorUsedError;
-  String get topicSlug => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String get slug => throw _privateConstructorUsedError;
   List<Problem> get questions => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -36,7 +36,7 @@ abstract class $ProbemsByTopicsCopyWith<$Res> {
           ProbemsByTopics value, $Res Function(ProbemsByTopics) then) =
       _$ProbemsByTopicsCopyWithImpl<$Res, ProbemsByTopics>;
   @useResult
-  $Res call({String topicName, String topicSlug, List<Problem> questions});
+  $Res call({String name, String slug, List<Problem> questions});
 }
 
 /// @nodoc
@@ -52,18 +52,18 @@ class _$ProbemsByTopicsCopyWithImpl<$Res, $Val extends ProbemsByTopics>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? topicName = null,
-    Object? topicSlug = null,
+    Object? name = null,
+    Object? slug = null,
     Object? questions = null,
   }) {
     return _then(_value.copyWith(
-      topicName: null == topicName
-          ? _value.topicName
-          : topicName // ignore: cast_nullable_to_non_nullable
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
               as String,
-      topicSlug: null == topicSlug
-          ? _value.topicSlug
-          : topicSlug // ignore: cast_nullable_to_non_nullable
+      slug: null == slug
+          ? _value.slug
+          : slug // ignore: cast_nullable_to_non_nullable
               as String,
       questions: null == questions
           ? _value.questions
@@ -81,7 +81,7 @@ abstract class _$$_ProbemsByTopicsCopyWith<$Res>
       __$$_ProbemsByTopicsCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String topicName, String topicSlug, List<Problem> questions});
+  $Res call({String name, String slug, List<Problem> questions});
 }
 
 /// @nodoc
@@ -95,18 +95,18 @@ class __$$_ProbemsByTopicsCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? topicName = null,
-    Object? topicSlug = null,
+    Object? name = null,
+    Object? slug = null,
     Object? questions = null,
   }) {
     return _then(_$_ProbemsByTopics(
-      topicName: null == topicName
-          ? _value.topicName
-          : topicName // ignore: cast_nullable_to_non_nullable
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
               as String,
-      topicSlug: null == topicSlug
-          ? _value.topicSlug
-          : topicSlug // ignore: cast_nullable_to_non_nullable
+      slug: null == slug
+          ? _value.slug
+          : slug // ignore: cast_nullable_to_non_nullable
               as String,
       questions: null == questions
           ? _value._questions
@@ -122,8 +122,8 @@ class _$_ProbemsByTopics
     with DiagnosticableTreeMixin
     implements _ProbemsByTopics {
   const _$_ProbemsByTopics(
-      {required this.topicName,
-      required this.topicSlug,
+      {required this.name,
+      required this.slug,
       required final List<Problem> questions})
       : _questions = questions;
 
@@ -131,9 +131,9 @@ class _$_ProbemsByTopics
       _$$_ProbemsByTopicsFromJson(json);
 
   @override
-  final String topicName;
+  final String name;
   @override
-  final String topicSlug;
+  final String slug;
   final List<Problem> _questions;
   @override
   List<Problem> get questions {
@@ -144,7 +144,7 @@ class _$_ProbemsByTopics
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ProbemsByTopics(topicName: $topicName, topicSlug: $topicSlug, questions: $questions)';
+    return 'ProbemsByTopics(name: $name, slug: $slug, questions: $questions)';
   }
 
   @override
@@ -152,8 +152,8 @@ class _$_ProbemsByTopics
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'ProbemsByTopics'))
-      ..add(DiagnosticsProperty('topicName', topicName))
-      ..add(DiagnosticsProperty('topicSlug', topicSlug))
+      ..add(DiagnosticsProperty('name', name))
+      ..add(DiagnosticsProperty('slug', slug))
       ..add(DiagnosticsProperty('questions', questions));
   }
 
@@ -162,18 +162,16 @@ class _$_ProbemsByTopics
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ProbemsByTopics &&
-            (identical(other.topicName, topicName) ||
-                other.topicName == topicName) &&
-            (identical(other.topicSlug, topicSlug) ||
-                other.topicSlug == topicSlug) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.slug, slug) || other.slug == slug) &&
             const DeepCollectionEquality()
                 .equals(other._questions, _questions));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, topicName, topicSlug,
-      const DeepCollectionEquality().hash(_questions));
+  int get hashCode => Object.hash(
+      runtimeType, name, slug, const DeepCollectionEquality().hash(_questions));
 
   @JsonKey(ignore: true)
   @override
@@ -191,17 +189,17 @@ class _$_ProbemsByTopics
 
 abstract class _ProbemsByTopics implements ProbemsByTopics {
   const factory _ProbemsByTopics(
-      {required final String topicName,
-      required final String topicSlug,
+      {required final String name,
+      required final String slug,
       required final List<Problem> questions}) = _$_ProbemsByTopics;
 
   factory _ProbemsByTopics.fromJson(Map<String, dynamic> json) =
       _$_ProbemsByTopics.fromJson;
 
   @override
-  String get topicName;
+  String get name;
   @override
-  String get topicSlug;
+  String get slug;
   @override
   List<Problem> get questions;
   @override

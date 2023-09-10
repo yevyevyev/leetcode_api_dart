@@ -21,6 +21,7 @@ ProblemList _$ProblemListFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ProblemList {
   int get total => throw _privateConstructorUsedError;
+  @JsonKey(name: 'questions')
   List<Problem> get problems => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +36,7 @@ abstract class $ProblemListCopyWith<$Res> {
           ProblemList value, $Res Function(ProblemList) then) =
       _$ProblemListCopyWithImpl<$Res, ProblemList>;
   @useResult
-  $Res call({int total, List<Problem> problems});
+  $Res call({int total, @JsonKey(name: 'questions') List<Problem> problems});
 }
 
 /// @nodoc
@@ -75,7 +76,7 @@ abstract class _$$_ProblemListCopyWith<$Res>
       __$$_ProblemListCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int total, List<Problem> problems});
+  $Res call({int total, @JsonKey(name: 'questions') List<Problem> problems});
 }
 
 /// @nodoc
@@ -109,7 +110,8 @@ class __$$_ProblemListCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ProblemList with DiagnosticableTreeMixin implements _ProblemList {
   const _$_ProblemList(
-      {required this.total, required final List<Problem> problems})
+      {required this.total,
+      @JsonKey(name: 'questions') required final List<Problem> problems})
       : _problems = problems;
 
   factory _$_ProblemList.fromJson(Map<String, dynamic> json) =>
@@ -119,6 +121,7 @@ class _$_ProblemList with DiagnosticableTreeMixin implements _ProblemList {
   final int total;
   final List<Problem> _problems;
   @override
+  @JsonKey(name: 'questions')
   List<Problem> get problems {
     if (_problems is EqualUnmodifiableListView) return _problems;
     // ignore: implicit_dynamic_type
@@ -169,8 +172,9 @@ class _$_ProblemList with DiagnosticableTreeMixin implements _ProblemList {
 
 abstract class _ProblemList implements ProblemList {
   const factory _ProblemList(
-      {required final int total,
-      required final List<Problem> problems}) = _$_ProblemList;
+          {required final int total,
+          @JsonKey(name: 'questions') required final List<Problem> problems}) =
+      _$_ProblemList;
 
   factory _ProblemList.fromJson(Map<String, dynamic> json) =
       _$_ProblemList.fromJson;
@@ -178,6 +182,7 @@ abstract class _ProblemList implements ProblemList {
   @override
   int get total;
   @override
+  @JsonKey(name: 'questions')
   List<Problem> get problems;
   @override
   @JsonKey(ignore: true)

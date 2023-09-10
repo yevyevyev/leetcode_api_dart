@@ -32,19 +32,21 @@ class SubmissionCalendarEntry with _$SubmissionCalendarEntry {
   }) = _SubmissionCalendarEntry;
 }
 
-List<SubmissionCalendarEntry> submissionCalendarFromJson(dynamic json) {
-  final decoded = jsonDecode(json) as Map<String, dynamic>;
-  return decoded.entries
-      .map((e) => SubmissionCalendarEntry(
-            date: DateTime.parse(e.key),
-            count: int.parse(e.value.toString()),
-          ))
-      .toList();
-}
+abstract class _SubmissionCalendarEntryConverter {
+  static List<SubmissionCalendarEntry> fromJson(dynamic json) {
+    final decoded = jsonDecode(json) as Map<String, dynamic>;
+    return decoded.entries
+        .map((e) => SubmissionCalendarEntry(
+              date: DateTime.parse(e.key),
+              count: int.parse(e.value.toString()),
+            ))
+        .toList();
+  }
 
-dynamic submissionCalendarToJson(List<SubmissionCalendarEntry> list) {
-  final data = Map.fromEntries(list.map((e) => MapEntry(e.date.toString(), e.count)));
-  return jsonEncode(data);
+  static dynamic toJson(List<SubmissionCalendarEntry> list) {
+    final data = Map.fromEntries(list.map((e) => MapEntry(e.date.toString(), e.count)));
+    return jsonEncode(data);
+  }
 }
 
 @freezed
@@ -53,7 +55,10 @@ class UserCalendar with _$UserCalendar {
     required List<int> activeYears,
     required List<DccBadges> dccBadges,
     required int streak,
-    @JsonKey(fromJson: submissionCalendarFromJson, toJson: submissionCalendarToJson)
+    @JsonKey(
+      fromJson: _SubmissionCalendarEntryConverter.fromJson,
+      toJson: _SubmissionCalendarEntryConverter.toJson,
+    )
     required List<SubmissionCalendarEntry> submissionCalendar,
     required int totalActiveDays,
   }) = _UserCalendar;
