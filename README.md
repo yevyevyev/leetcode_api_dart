@@ -91,3 +91,10 @@ String buildMyGraphQLQueryHere({required String param}) => r'''{
     "variables": {}
   }''';
 ```
+
+## Tests
+In order to run tests, create a `.env` file in root directory
+```bash
+LEETCODE_SESSION_TOKEN=your_leetcode_session_from_cookie
+LEETCODE_CSRF_TOKEN=your_leetcode_csrfToken_from_cookie
+```
