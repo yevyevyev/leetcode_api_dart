@@ -1,7 +1,8 @@
 name: leetcode_api_dart
 description: Leetcode API for Dart
 version: 0.0.1
-homepage:
+homepage: https://github.com/yevyevyev/leetcode_api_dart
+repository: https://github.com/yevyevyev/leetcode_api_dart
 
 environment:
   sdk: '>=3.0.6 <4.0.0'
